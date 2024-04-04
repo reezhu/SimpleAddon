@@ -16,11 +16,11 @@
 -
   3. 暂无
 -
-  4. 在pythonScripts/share/modConfig.py中修改自己的组件名
+  4. 在pythonScripts/share/ModConfig.py中修改自己的组件名
 -
-  5. 在modMain.py中，注册服务端或者客户端，不需要写system.registerModule,只写import和类本身的构造即可
+  5. 在ModConfig.py中，使用system.registerModule注册服务端或者客户端，import写在文中不要写在文件头，避免报错时难以定位
 -
-  6. 在类中找到配置的example或者找技术问到配置的格式，复制到modMain.py内的registerData下，根据对应格式进行配置
+  6. 在类中找到配置的example，复制到ModConfig.py内的registerData下，根据对应格式进行配置
 -
   7. （可选）使用generator工具生成json配置(即将开源)
 -
@@ -79,7 +79,7 @@
 
   由于性能考虑，原来的scheduler从静态工具变成了module，需要使用StaticConfig中的模块名字来获取，如ClientUtils.getModule(StaticConfig.schedulerModule)
 
-  camera模块的调用方式不变
+  camera模块暂未开源，整理后会进行发布
 
 - 与模板的同步
 
@@ -99,3 +99,4 @@
 说明：
 为了避免mod冲突，选择了ND来禁止对公共模块的修改，这里特别规定，修改behavior_pack/pythonScripts/share/ModConfig.py文件以及新增模块的行为不受ND限制
 也就是说，你可以自由fork这个项目，在此基础上添加自己的module，并配置在ModConfig中，并用于商用目的，但是禁止进行二次发布，如果你想分享你编写的模块，可以提交pr加入主分支
+另外在正式发布之前，你必须执行开发流程中的9/10/11三个步骤以避免mod冲突

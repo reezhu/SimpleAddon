@@ -3,3 +3,4 @@ SimpleAddon © 2024 by Ree is licensed under CC BY-ND 4.0
 特殊说明
 为了避免mod冲突，选择了ND来禁止对公共模块的修改，这里特别规定，修改behavior_pack/pythonScripts/share/ModConfig.py文件以及新增模块的行为不受ND规则限制
 也就是说，你可以自由fork这个项目，在此基础上添加自己的module，并配置在ModConfig中，并用于商用目的，但是禁止进行二次发布，如果你想分享你编写的模块，可以提交pr加入主分支
+另外在正式发布之前，你必须执行开发流程中的9/10/11三个步骤以避免mod冲突
