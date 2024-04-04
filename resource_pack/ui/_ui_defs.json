@@ -1,13 +1,5 @@
 {
   "ui_defs": [
-    "ui/redstone_barrage_v1.json",
-    "ui/redstone_common_v3.json",
-    "ui/redstone_confirm_v1.json",
-    "ui/redstone_decorator_v2.json",
-    "ui/redstone_dynamic_ui_v2.json",
-    "ui/redstone_equipment_v2.json",
-    "ui/redstone_select_v2.json",
-    "ui/redstone_tutorial_v2.json",
-    "ui/redstone_weapon_hud_v2.json"
+
   ]
 }

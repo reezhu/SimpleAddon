@@ -107,16 +107,69 @@ def listTextures():
         json.dump(j, f, **JSON_SETTING)
 
 
-blacklist = [
-    "entity/player.entity.json"
-]
+blacklist = ['animations/tpos.animation_v2.json',
+             'animations/tpos_firstperson.animation.json',
+             'entity/common.empty_projectile.json',
+             'entity/player.entity.json',
+             'models/entity/empty_v4.json',
+             'models/entity/empty_weapon.json',
+             'models/entity/steve_humanoid.geo.v1.json',
+             'models/entity/t_pos_humanoid.geo.v3.json',
+             'models/entity/t_pos_humanoid_full.geo.v3.json',
+             'render_controllers/common.empty_projectile.json',
+             'shaders/.glsl/workspace.code-workspace',
+             'shaders/glsl/.clang-format',
+             'shaders/glsl/fire_noise.h',
+             'shaders/glsl/perlin_noise.h',
+             'shaders/glsl/rsm_light.frag',
+             'shaders/glsl/rsm_light_v2.frag',
+             'shaders/glsl/rsm_rgb.frag',
+             'shaders/glsl/rs_entity_v1.frag',
+             'textures/ui/common/black.png',
+             'textures/ui/common/blank.png',
+             'textures/ui/common/decorator_avatar.png',
+             'textures/ui/common/decorator_belt.png',
+             'textures/ui/common/decorator_cape.png',
+             'textures/ui/common/decorator_head.png',
+             'textures/ui/common/decorator_necklace.png',
+             'textures/ui/common/decorator_ring.png',
+             'textures/ui/common/decorator_talisman.png',
+             'textures/ui/common/durability_empty.png',
+             'textures/ui/common/durability_full.png',
+             'textures/ui/common/exchange_mask.png',
+             'textures/ui/common/item_cell.png',
+             'textures/ui/common/mask.png',
+             'textures/ui/common/necklace.png',
+             'textures/ui/common/white.png',
+             'textures/ui/tutorial_v2/book_frame.png',
+             'textures/ui/tutorial_v2/book_pageedge_left.png',
+             'textures/ui/tutorial_v2/book_pageedge_right.png',
+             'textures/ui/tutorial_v2/close.png',
+             'textures/ui/tutorial_v2/close2.png',
+             'textures/ui/tutorial_v2/mainpage.png',
+             'textures/ui/tutorial_v2/next.png',
+             'textures/ui/tutorial_v2/next_page.png',
+             'textures/ui/tutorial_v2/previous.png',
+             'textures/ui/tutorial_v2/previous_page.png',
+             'ui/redstone_barrage_v1.json',
+             'ui/redstone_common_v3.json',
+             'ui/redstone_confirm_v1.json',
+             'ui/redstone_decorator_v2.json',
+             'ui/redstone_dynamic_ui_v2.json',
+             'ui/redstone_equipment_v2.json',
+             'ui/redstone_select_v2.json',
+             'ui/redstone_tutorial_v2.json',
+             'ui/redstone_weapon_hud_v2.json']
 
 
 def duplicateCheck():
+    clean = False
     for path in blacklist:
         if os.path.exists(os.path.join(RESOURCE_ROOT, path)):
             print "ERROR:为了避免mod之间冲突，将会删除", os.path.join(RESOURCE_ROOT, path)
             break
+    if clean:
+        print "已删除不允许修改部分资源，这部分资源会在公共的依赖中提供，请在发布的明显位置提示玩家下载即可"
 
 
 if __name__ == "__main__":
