@@ -1,0 +1,366 @@
+{
+  "background": {
+    "alpha": 1.0,
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "clip_direction": "left",
+    "clip_offset": [0, 0],
+    "clip_ratio": 0.0,
+    "clips_children": false,
+    "enabled": true,
+    "fill": false,
+    "grayscale": false,
+    "is_new_nine_slice": false,
+    "keep_ratio": false,
+    "layer": 1,
+    "max_size": [0, 0],
+    "min_size": [0, 0],
+    "nine_slice_buttom": 7,
+    "nine_slice_left": 6,
+    "nine_slice_right": 6,
+    "nine_slice_top": 20,
+    "nineslice_size": [6.0, 20.0, 6.0, 7.0],
+    "offset": [0, 0.0],
+    "priority": 0,
+    "propagate_alpha": false,
+    "size": ["100.0%+0.0px", "100.0%+0.0px"],
+    "texture": "textures/ui/achievements_dialog",
+    "type": "image",
+    "uv": [0, 0],
+    "uv_size": [0, 0],
+    "visible": true
+  },
+  "button_label": {
+    "alpha": "$control_alpha",
+    "color": "$label_color",
+    "font_scale_factor": "$label_font_scale_factor",
+    "font_size": "$label_font_size",
+    "font_type": "smooth",
+    "layer": "$label_layer",
+    "max_size": ["100%", "100%"],
+    "offset": "$label_offset",
+    "shadow": false,
+    "text": "$label_text",
+    "text_alignment": "center",
+    "type": "label"
+  },
+  "cancel@common.button": {
+    "$control_alpha": 1.0,
+    "$default_texture": "textures/netease/common/button/default",
+    "$hover_texture": "textures/netease/common/button/hover",
+    "$is_new_nine_slice": false,
+    "$label_color": [1.0, 0.0, 0.0],
+    "$label_font_scale_factor": 1.0,
+    "$label_font_size": "large",
+    "$label_layer": 3,
+    "$label_offset": [0, 0],
+    "$label_text": "取消",
+    "$nine_slice_buttom": 2,
+    "$nine_slice_left": 2,
+    "$nine_slice_right": 2,
+    "$nine_slice_top": 2,
+    "$nineslice_size": [2.0, 2.0, 2.0, 2.0],
+    "$pressed_button_name": "%redstone_confirm_v1.click",
+    "$pressed_texture": "textures/netease/common/button/pressed",
+    "$texture_layer": 2,
+    "alpha": 1.0,
+    "anchor_from": "bottom_middle",
+    "anchor_to": "bottom_middle",
+    "bindings": [
+      {
+        "binding_collection_name": "",
+        "binding_condition": "always_when_visible",
+        "binding_type": "collection_details"
+      }
+    ],
+    "button_mappings": [],
+    "clip_offset": [0, 0],
+    "clips_children": false,
+    "controls": [
+      {
+        "default@redstone_confirm_v1.default": {}
+      },
+      {
+        "hover@redstone_confirm_v1.hover": {}
+      },
+      {
+        "pressed@redstone_confirm_v1.pressed": {}
+      },
+      {
+        "button_label@redstone_confirm_v1.button_label": {}
+      }
+    ],
+    "draggable": "not_draggable",
+    "enabled": true,
+    "is_handle_button_move_event": true,
+    "layer": 1,
+    "max_size": [0, 0],
+    "min_size": [0, 0],
+    "offset": [0, "-21.0%+0.0px"],
+    "priority": 0,
+    "propagate_alpha": false,
+    "size": ["50.0%+0.0px", "15.0%+0.0px"],
+    "visible": true
+  },
+  "confirm@common.button": {
+    "$control_alpha": 1.0,
+    "$default_texture": "textures/netease/common/button/default",
+    "$hover_texture": "textures/netease/common/button/hover",
+    "$is_new_nine_slice": false,
+    "$label_color": [0.0, 1.0, 0.0],
+    "$label_font_scale_factor": 1.0,
+    "$label_font_size": "large",
+    "$label_layer": 3,
+    "$label_offset": [0, 0],
+    "$label_text": "确定",
+    "$nine_slice_buttom": 2,
+    "$nine_slice_left": 2,
+    "$nine_slice_right": 2,
+    "$nine_slice_top": 2,
+    "$nineslice_size": [2.0, 2.0, 2.0, 2.0],
+    "$pressed_button_name": "%redstone_confirm_v1.click",
+    "$pressed_texture": "textures/netease/common/button/pressed",
+    "$texture_layer": 2,
+    "alpha": 1.0,
+    "anchor_from": "bottom_middle",
+    "anchor_to": "bottom_middle",
+    "bindings": [
+      {
+        "binding_collection_name": "",
+        "binding_condition": "always_when_visible",
+        "binding_type": "collection_details"
+      }
+    ],
+    "button_mappings": [],
+    "clip_offset": [0, 0],
+    "clips_children": false,
+    "controls": [
+      {
+        "default@redstone_confirm_v1.default": {}
+      },
+      {
+        "hover@redstone_confirm_v1.hover": {}
+      },
+      {
+        "pressed@redstone_confirm_v1.pressed": {}
+      },
+      {
+        "button_label@redstone_confirm_v1.button_label": {}
+      }
+    ],
+    "draggable": "not_draggable",
+    "enabled": true,
+    "is_handle_button_move_event": true,
+    "layer": 1,
+    "max_size": [0, 0],
+    "min_size": [0, 0],
+    "offset": [0, "-5.0%+0.0px"],
+    "priority": 0,
+    "propagate_alpha": false,
+    "size": ["50.0%+0.0px", "15.0%+0.0px"],
+    "visible": true
+  },
+  "default": {
+    "alpha": "$control_alpha",
+    "is_new_nine_slice": "$is_new_nine_slice",
+    "layer": "$texture_layer",
+    "nine_slice_buttom": "$nine_slice_buttom",
+    "nine_slice_left": "$nine_slice_left",
+    "nine_slice_right": "$nine_slice_right",
+    "nine_slice_top": "$nine_slice_top",
+    "nineslice_size": "$nineslice_size",
+    "texture": "$default_texture",
+    "type": "image"
+  },
+  "hover": {
+    "alpha": "$control_alpha",
+    "is_new_nine_slice": "$is_new_nine_slice",
+    "layer": "$texture_layer",
+    "nine_slice_buttom": "$nine_slice_buttom",
+    "nine_slice_left": "$nine_slice_left",
+    "nine_slice_right": "$nine_slice_right",
+    "nine_slice_top": "$nine_slice_top",
+    "nineslice_size": "$nineslice_size",
+    "texture": "$hover_texture",
+    "type": "image"
+  },
+  "icon": {
+    "alpha": 1.0,
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "clip_direction": "left",
+    "clip_offset": [0, 0],
+    "clip_ratio": 0.0,
+    "clips_children": false,
+    "enabled": true,
+    "fill": false,
+    "grayscale": false,
+    "is_new_nine_slice": false,
+    "keep_ratio": true,
+    "layer": 5,
+    "max_size": [0, 0],
+    "min_size": [0, 0],
+    "nine_slice_buttom": 0,
+    "nine_slice_left": 0,
+    "nine_slice_right": 0,
+    "nine_slice_top": 0,
+    "nineslice_size": [0, 0, 0, 0],
+    "offset": [0, "12.0%+0.0px"],
+    "priority": 0,
+    "propagate_alpha": false,
+    "size": ["16.0%+0.0px", "16.0%+0.0px"],
+    "texture": "textures/blocks/redstone_torch_on",
+    "type": "image",
+    "uv": [0, 0],
+    "uv_size": [0, 0],
+    "visible": true
+  },
+  "main": {
+    "absorbs_input": true,
+    "always_accepts_input": false,
+    "controls": [
+      {
+        "mask@redstone_confirm_v1.mask": {}
+      },
+      {
+        "operation@redstone_confirm_v1.operation": {}
+      }
+    ],
+    "force_render_below": false,
+    "is_showing_menu": true,
+    "render_game_behind": true,
+    "render_only_when_topmost": true,
+    "should_steal_mouse": false,
+    "type": "screen"
+  },
+  "mask@common.button": {
+    "$control_alpha": 1.0,
+    "$default_texture": "textures/ui/common/mask",
+    "$hover_texture": "textures/ui/common/mask",
+    "$is_new_nine_slice": true,
+    "$label_color": [1, 1, 1],
+    "$label_font_scale_factor": 1.0,
+    "$label_font_size": "large",
+    "$label_layer": 3,
+    "$label_offset": [0, 0],
+    "$label_text": "",
+    "$nine_slice_buttom": 0,
+    "$nine_slice_left": 0,
+    "$nine_slice_right": 0,
+    "$nine_slice_top": 0,
+    "$nineslice_size": [0, 0, 0, 0],
+    "$pressed_button_name": "%redstone_confirm_v1.click",
+    "$pressed_texture": "textures/ui/common/mask",
+    "$texture_layer": 2,
+    "alpha": 1.0,
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "bindings": [
+      {
+        "binding_collection_name": "",
+        "binding_condition": "always_when_visible",
+        "binding_type": "collection_details"
+      }
+    ],
+    "button_mappings": [],
+    "clip_offset": [0, 0],
+    "clips_children": false,
+    "controls": [
+      {
+        "default@redstone_confirm_v1.default": {}
+      },
+      {
+        "hover@redstone_confirm_v1.hover": {}
+      },
+      {
+        "pressed@redstone_confirm_v1.pressed": {}
+      },
+      {
+        "button_label@redstone_confirm_v1.button_label": {}
+      }
+    ],
+    "draggable": "not_draggable",
+    "enabled": true,
+    "is_handle_button_move_event": true,
+    "layer": 500,
+    "max_size": [0, 0],
+    "min_size": [0, 0],
+    "offset": [0, 0],
+    "priority": 0,
+    "propagate_alpha": false,
+    "size": ["100.0%+0.0px", "100.0%+0.0px"],
+    "visible": true
+  },
+  "namespace": "redstone_confirm_v1",
+  "operation": {
+    "alpha": 1.0,
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "clip_offset": [0, 0],
+    "clips_children": false,
+    "controls": [
+      {
+        "background@redstone_confirm_v1.background": {}
+      },
+      {
+        "confirm@redstone_confirm_v1.confirm": {}
+      },
+      {
+        "cancel@redstone_confirm_v1.cancel": {}
+      },
+      {
+        "icon@redstone_confirm_v1.icon": {}
+      },
+      {
+        "text@redstone_confirm_v1.text": {}
+      }
+    ],
+    "enabled": true,
+    "layer": 550,
+    "max_size": [0, 0],
+    "min_size": [0, 0],
+    "offset": [0, 0],
+    "priority": 0,
+    "propagate_alpha": false,
+    "size": [200, 200],
+    "type": "panel",
+    "visible": true
+  },
+  "pressed": {
+    "alpha": "$control_alpha",
+    "is_new_nine_slice": "$is_new_nine_slice",
+    "layer": "$texture_layer",
+    "nine_slice_buttom": "$nine_slice_buttom",
+    "nine_slice_left": "$nine_slice_left",
+    "nine_slice_right": "$nine_slice_right",
+    "nine_slice_top": "$nine_slice_top",
+    "nineslice_size": "$nineslice_size",
+    "texture": "$pressed_texture",
+    "type": "image"
+  },
+  "text": {
+    "alpha": 1.0,
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "clip_offset": [0, 0],
+    "clips_children": false,
+    "color": [1, 1, 1],
+    "enabled": true,
+    "font_scale_factor": 0.9399999976158142,
+    "font_size": "normal",
+    "font_type": "smooth",
+    "layer": 1,
+    "line_padding": 0.0,
+    "max_size": [0, 0],
+    "min_size": [0, 0],
+    "offset": [0, 0],
+    "priority": 0,
+    "propagate_alpha": false,
+    "shadow": false,
+    "size": ["90.0%+0.0px", "40.0%+0.0px"],
+    "text": "是否确认此操作？",
+    "text_alignment": "center",
+    "type": "label",
+    "visible": true
+  }
+}

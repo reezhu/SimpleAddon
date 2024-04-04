@@ -1,0 +1,11 @@
+# Created by .ignore support plugin (hsz.mobi)
+.idea
+work.mcscfg
+/behavior_pack/pythonScripts/test/
+/resource_pack/animations/_animation_example.json
+/resource_pack/animations/_animation_baseball_strike.json
+/resource_pack/shaders/.glsl/
+/venv/
+/.mcs/
+/studio.json
+/resource_pack/shaders/glsl/shaders/

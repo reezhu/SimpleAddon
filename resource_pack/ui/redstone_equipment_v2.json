@@ -1,0 +1,232 @@
+{
+  "background@common.button": {
+    "$control_alpha": 1.0,
+    "$default_texture": "textures/ui/common/blank",
+    "$hover_texture": "textures/ui/common/blank",
+    "$is_new_nine_slice": true,
+    "$label_color": [1, 1, 1],
+    "$label_font_scale_factor": 1.0,
+    "$label_font_size": "large",
+    "$label_layer": 3,
+    "$label_offset": [0, 0],
+    "$label_text": "",
+    "$nine_slice_buttom": 0,
+    "$nine_slice_left": 0,
+    "$nine_slice_right": 0,
+    "$nine_slice_top": 0,
+    "$nineslice_size": [0, 0, 0, 0],
+    "$pressed_button_name": "%redstone_equipment_v2.click",
+    "$pressed_texture": "textures/ui/common/blank",
+    "$texture_layer": 2,
+    "alpha": 1.0,
+    "anchor_from": "left_middle",
+    "anchor_to": "left_middle",
+    "bindings": [
+      {
+        "binding_collection_name": "",
+        "binding_condition": "always_when_visible",
+        "binding_type": "collection_details"
+      }
+    ],
+    "button_mappings": [],
+    "clip_offset": [0, 0],
+    "clips_children": false,
+    "controls": [
+      {
+        "default@redstone_equipment_v2.default": {}
+      },
+      {
+        "hover@redstone_equipment_v2.hover": {}
+      },
+      {
+        "pressed@redstone_equipment_v2.pressed": {}
+      },
+      {
+        "button_label@redstone_equipment_v2.button_label": {}
+      },
+      {
+        "equipments@redstone_equipment_v2.equipments": {}
+      }
+    ],
+    "draggable": "not_draggable",
+    "enabled": true,
+    "is_handle_button_move_event": true,
+    "layer": 10,
+    "max_size": [0, 0],
+    "min_size": [0, 0],
+    "offset": [0, "0.0%+0.0px"],
+    "propagate_alpha": false,
+    "size": ["15.0%+0.0px", "40.0%+0.0px"],
+    "visible": true
+  },
+  "button_label": {
+    "alpha": "$control_alpha",
+    "color": "$label_color",
+    "font_scale_factor": "$label_font_scale_factor",
+    "font_size": "$label_font_size",
+    "font_type": "smooth",
+    "layer": "$label_layer",
+    "max_size": ["100%", "100%"],
+    "offset": "$label_offset",
+    "shadow": false,
+    "text": "$label_text",
+    "text_alignment": "center",
+    "type": "label"
+  },
+  "default": {
+    "alpha": "$control_alpha",
+    "is_new_nine_slice": "$is_new_nine_slice",
+    "layer": "$texture_layer",
+    "nine_slice_buttom": "$nine_slice_buttom",
+    "nine_slice_left": "$nine_slice_left",
+    "nine_slice_right": "$nine_slice_right",
+    "nine_slice_top": "$nine_slice_top",
+    "nineslice_size": "$nineslice_size",
+    "texture": "$default_texture",
+    "type": "image"
+  },
+  "equipmentCell": {
+    "alpha": 1.0,
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "clip_offset": [0, 0],
+    "clips_children": false,
+    "controls": [
+      {
+        "equipmentRender@redstone_equipment_v2.equipmentRender": {}
+      },
+      {
+        "equipmentText@redstone_equipment_v2.equipmentText": {}
+      }
+    ],
+    "enabled": true,
+    "layer": 1,
+    "max_size": [0, 0],
+    "min_size": [0, 0],
+    "offset": [0.0, "0.0%+0.0px"],
+    "propagate_alpha": false,
+    "size": ["50.0%+0.0px", "100.0%+0.0px"],
+    "type": "panel",
+    "visible": true
+  },
+  "equipmentRender": {
+    "alpha": 1.0,
+    "anchor_from": "left_middle",
+    "anchor_to": "left_middle",
+    "clip_offset": [0, 0],
+    "clips_children": false,
+    "enabled": true,
+    "layer": 1,
+    "max_size": [0, 0],
+    "min_size": [0, 0],
+    "offset": [0, 0],
+    "propagate_alpha": false,
+    "property_bag": {
+      "#item_id_aux": 0
+    },
+    "renderer": "inventory_item_renderer",
+    "size": ["50.0%+0.0px", "100.0%+0.0px"],
+    "type": "custom",
+    "visible": true
+  },
+  "equipmentText": {
+    "alpha": 1.0,
+    "anchor_from": "right_middle",
+    "anchor_to": "right_middle",
+    "clip_offset": [0, 0],
+    "clips_children": false,
+    "color": [1, 1, 1],
+    "enabled": true,
+    "font_scale_factor": 1.0,
+    "font_size": "normal",
+    "font_type": "unicode",
+    "layer": 1,
+    "line_padding": 0.0,
+    "max_size": [0, 0],
+    "min_size": [0, 0],
+    "offset": [0, 0],
+    "propagate_alpha": false,
+    "shadow": false,
+    "size": ["50.0%+0.0px", "80.0%+0.0px"],
+    "text": "",
+    "text_alignment": "left",
+    "type": "label",
+    "visible": true
+  },
+  "equipments": {
+    "alpha": 1.0,
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "clip_offset": [0, 0],
+    "clips_children": false,
+    "collection_name": "equipments",
+    "enabled": true,
+    "grid_dimensions": [2.0, 4.0],
+    "grid_item_template": "redstone_equipment_v2.equipmentCell",
+    "grid_rescaling_type": "none",
+    "layer": 1,
+    "max_size": [0, 0],
+    "maximum_grid_items": 0,
+    "min_size": [0, 0],
+    "offset": [0, 0],
+    "propagate_alpha": true,
+    "size": ["100.0%+0.0px", "100.0%+0.0px"],
+    "type": "grid",
+    "visible": true
+  },
+  "equipmentsContent0": {
+    "absorbs_input": true,
+    "always_accepts_input": false,
+    "controls": [
+      {
+        "equipmentCell@redstone_equipment_v2.equipmentCell": {}
+      }
+    ],
+    "force_render_below": false,
+    "is_showing_menu": true,
+    "render_game_behind": true,
+    "render_only_when_topmost": true,
+    "should_steal_mouse": false,
+    "type": "screen"
+  },
+  "hover": {
+    "alpha": "$control_alpha",
+    "is_new_nine_slice": "$is_new_nine_slice",
+    "layer": "$texture_layer",
+    "nine_slice_buttom": "$nine_slice_buttom",
+    "nine_slice_left": "$nine_slice_left",
+    "nine_slice_right": "$nine_slice_right",
+    "nine_slice_top": "$nine_slice_top",
+    "nineslice_size": "$nineslice_size",
+    "texture": "$hover_texture",
+    "type": "image"
+  },
+  "main": {
+    "absorbs_input": true,
+    "always_accepts_input": false,
+    "controls": [
+      {
+        "background@redstone_equipment_v2.background": {}
+      }
+    ],
+    "force_render_below": false,
+    "is_showing_menu": true,
+    "render_game_behind": true,
+    "render_only_when_topmost": true,
+    "should_steal_mouse": false,
+    "type": "screen"
+  },
+  "namespace": "redstone_equipment_v2",
+  "pressed": {
+    "alpha": "$control_alpha",
+    "is_new_nine_slice": "$is_new_nine_slice",
+    "layer": "$texture_layer",
+    "nine_slice_buttom": "$nine_slice_buttom",
+    "nine_slice_left": "$nine_slice_left",
+    "nine_slice_right": "$nine_slice_right",
+    "nine_slice_top": "$nine_slice_top",
+    "nineslice_size": "$nineslice_size",
+    "texture": "$pressed_texture",
+    "type": "image"
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "format_version": "1.12.0",
+  "minecraft:geometry": [
+    {
+      "description": {
+        "identifier": "geometry.steve.humanoid.v3",
+        "texture_width": 1,
+        "texture_height": 1,
+        "visible_bounds_width": 0,
+        "visible_bounds_height": 0,
+        "visible_bounds_offset": [0, 1.5, 0]
+      },
+      "bones": [
+        {
+          "name": "root",
+          "pivot": [0, 0, 0]
+        },
+        {
+          "name": "waist",
+          "parent": "root",
+          "pivot": [0, 12, 0]
+        },
+        {
+          "name": "body",
+          "parent": "waist",
+          "pivot": [0, 24, 0]
+        },
+        {
+          "name": "head",
+          "parent": "body",
+          "pivot": [0, 24, 0]
+        },
+        {
+          "name": "cape",
+          "parent": "body",
+          "pivot": [0, 24, 3]
+        },
+        {
+          "name": "leftArm",
+          "parent": "body",
+          "pivot": [5, 22, 0]
+        },
+        {
+          "name": "leftSleeve",
+          "parent": "leftArm",
+          "pivot": [5, 22, 0]
+        },
+        {
+          "name": "leftItem",
+          "parent": "leftArm",
+          "pivot": [6, 15, 1]
+        },
+        {
+          "name": "rightArm",
+          "parent": "body",
+          "pivot": [-5, 22, 0]
+        },
+        {
+          "name": "rightSleeve",
+          "parent": "rightArm",
+          "pivot": [-5, 22, 0]
+        },
+        {
+          "name": "rightItem",
+          "parent": "rightArm",
+          "pivot": [-6, 15, 1]
+        },
+        {
+          "name": "jacket",
+          "parent": "body",
+          "pivot": [0, 24, 0]
+        },
+        {
+          "name": "leftLeg",
+          "parent": "root",
+          "pivot": [1.9, 12, 0]
+        },
+        {
+          "name": "leftPants",
+          "parent": "leftLeg",
+          "pivot": [1.9, 12, 0]
+        },
+        {
+          "name": "rightLeg",
+          "parent": "root",
+          "pivot": [-1.9, 12, 0]
+        },
+        {
+          "name": "rightPants",
+          "parent": "rightLeg",
+          "pivot": [-1.9, 12, 0]
+        }
+      ]
+    }
+  ]
+}

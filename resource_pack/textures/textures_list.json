@@ -1,0 +1,18 @@
+[
+  "textures/ui/common/black",
+  "textures/ui/common/blank",
+  "textures/ui/common/decorator_avatar",
+  "textures/ui/common/decorator_belt",
+  "textures/ui/common/decorator_cape",
+  "textures/ui/common/decorator_head",
+  "textures/ui/common/decorator_necklace",
+  "textures/ui/common/decorator_ring",
+  "textures/ui/common/decorator_talisman",
+  "textures/ui/common/durability_empty",
+  "textures/ui/common/durability_full",
+  "textures/ui/common/exchange_mask",
+  "textures/ui/common/item_cell",
+  "textures/ui/common/mask",
+  "textures/ui/common/necklace",
+  "textures/ui/common/white"
+]

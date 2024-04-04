@@ -1,0 +1,82 @@
+{
+  "background": {
+    "alpha": 1.0,
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "clip_offset": [0, 0],
+    "clips_children": false,
+    "enabled": true,
+    "layer": 0,
+    "max_size": [0, 0],
+    "min_size": [0, 0],
+    "offset": [0, 0],
+    "propagate_alpha": false,
+    "size": ["100.000000%+0 px", "100.000000%+0px"],
+    "type": "panel",
+    "visible": true
+  },
+  "label": {
+    "alpha": 1.0,
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "clip_offset": [0, 0],
+    "clips_children": false,
+    "color": [1, 1, 1],
+    "enabled": true,
+    "font_scale_factor": 1.0,
+    "font_size": "normal",
+    "font_type": "smooth",
+    "layer": 10,
+    "line_padding": 0.0,
+    "max_size": [0, 0],
+    "min_size": [0, 0],
+    "offset": [0, 0],
+    "propagate_alpha": false,
+    "shadow": false,
+    "size": [100, 100],
+    "text": "",
+    "text_alignment": "left",
+    "type": "label",
+    "visible": true
+  },
+  "main": {
+    "absorbs_input": true,
+    "always_accepts_input": false,
+    "controls": [
+      {
+        "background@redstone_barrage_v1.background": {}
+      },
+      {
+        "source@redstone_barrage_v1.source": {}
+      }
+    ],
+    "force_render_below": false,
+    "is_showing_menu": true,
+    "render_game_behind": true,
+    "render_only_when_topmost": true,
+    "should_steal_mouse": false,
+    "type": "screen"
+  },
+  "namespace": "redstone_barrage_v1",
+  "source": {
+    "alpha": 1.0,
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "clip_offset": [0, 0],
+    "clips_children": false,
+    "controls": [
+      {
+        "label@redstone_barrage_v1.label": {}
+      }
+    ],
+    "enabled": true,
+    "layer": 2,
+    "max_size": [0, 0],
+    "min_size": [0, 0],
+    "offset": [0, 0],
+    "propagate_alpha": false,
+    "size": [376, 250],
+    "type": "panel",
+    "visible": false
+  }
+}

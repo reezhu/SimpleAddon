@@ -1,0 +1,699 @@
+{
+  "attach": {
+    "absorbs_input": true,
+    "always_accepts_input": false,
+    "controls": [
+      {
+        "screen@redstone_decorator_v2.screen": {}
+      },
+      {
+        "screen_pocket@redstone_decorator_v2.screen_pocket": {}
+      }
+    ],
+    "force_render_below": false,
+    "is_showing_menu": true,
+    "render_game_behind": true,
+    "render_only_when_topmost": true,
+    "should_steal_mouse": false,
+    "type": "screen"
+  },
+  "backgroundImage": {
+    "alpha": 1.0,
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "clip_direction": "left",
+    "clip_offset": [0, 0],
+    "clip_ratio": 0.0,
+    "clips_children": false,
+    "enabled": true,
+    "fill": false,
+    "grayscale": false,
+    "is_new_nine_slice": false,
+    "keep_ratio": false,
+    "layer": 1,
+    "max_size": [0, 0],
+    "min_size": [0, 0],
+    "nine_slice_buttom": 4,
+    "nine_slice_left": 4,
+    "nine_slice_right": 4,
+    "nine_slice_top": 4,
+    "nineslice_size": [4.0, 4.0, 4.0, 4.0],
+    "offset": [0, 0],
+    "propagate_alpha": false,
+    "size": ["100.0%+0.0px", "100.0%+0.0px"],
+    "texture": "textures/ui/background_panel",
+    "type": "image",
+    "uv": [0, 0],
+    "uv_size": [0, 0],
+    "visible": true
+  },
+  "button0@common.button": {
+    "$control_alpha": 1.0,
+    "$default_texture": "textures/netease/common/button/default",
+    "$hover_texture": "textures/netease/common/button/hover",
+    "$is_new_nine_slice": true,
+    "$label_color": [1, 1, 1],
+    "$label_font_scale_factor": 1.0,
+    "$label_font_size": "large",
+    "$label_layer": 3,
+    "$label_offset": [0, 0],
+    "$label_text": "",
+    "$nine_slice_buttom": 0,
+    "$nine_slice_left": 0,
+    "$nine_slice_right": 0,
+    "$nine_slice_top": 0,
+    "$nineslice_size": [0, 0, 0, 0],
+    "$pressed_button_name": "%redstone_decorator_v2.click",
+    "$pressed_texture": "textures/netease/common/button/pressed",
+    "$texture_layer": 2,
+    "alpha": 1.0,
+    "anchor_from": "top_right",
+    "anchor_to": "top_right",
+    "bindings": [
+      {
+        "binding_collection_name": "",
+        "binding_condition": "always_when_visible",
+        "binding_type": "collection_details"
+      }
+    ],
+    "button_mappings": [],
+    "clip_offset": [0, 0],
+    "clips_children": false,
+    "controls": [
+      {
+        "default@redstone_decorator_v2.default": {}
+      },
+      {
+        "hover@redstone_decorator_v2.hover": {}
+      },
+      {
+        "pressed@redstone_decorator_v2.pressed": {}
+      },
+      {
+        "button_label@redstone_decorator_v2.button_label": {}
+      },
+      {
+        "image@redstone_decorator_v2.image": {}
+      }
+    ],
+    "draggable": "not_draggable",
+    "enabled": true,
+    "is_handle_button_move_event": true,
+    "layer": 0,
+    "max_size": [0, 0],
+    "min_size": [0, 0],
+    "offset": [0, 0],
+    "propagate_alpha": false,
+    "size": [28, 28],
+    "visible": true
+  },
+  "button_label": {
+    "alpha": "$control_alpha",
+    "color": "$label_color",
+    "font_scale_factor": "$label_font_scale_factor",
+    "font_size": "$label_font_size",
+    "font_type": "smooth",
+    "layer": "$label_layer",
+    "max_size": ["100%", "100%"],
+    "offset": "$label_offset",
+    "shadow": false,
+    "text": "$label_text",
+    "text_alignment": "center",
+    "type": "label"
+  },
+  "close@common.button": {
+    "$control_alpha": 1.0,
+    "$default_texture": "textures/ui/close_button_default_light",
+    "$hover_texture": "textures/ui/close_button_hover_light",
+    "$is_new_nine_slice": false,
+    "$label_color": [1, 1, 1],
+    "$label_font_scale_factor": 1.0,
+    "$label_font_size": "large",
+    "$label_layer": 3,
+    "$label_offset": [0, 0],
+    "$label_text": "",
+    "$nine_slice_buttom": 0,
+    "$nine_slice_left": 0,
+    "$nine_slice_right": 0,
+    "$nine_slice_top": 0,
+    "$nineslice_size": [0, 0, 0, 0],
+    "$pressed_button_name": "%redstone_decorator_v2.click",
+    "$pressed_texture": "textures/ui/close_button_pressed_light",
+    "$texture_layer": 2,
+    "alpha": 1.0,
+    "anchor_from": "top_right",
+    "anchor_to": "top_right",
+    "bindings": [
+      {
+        "binding_collection_name": "",
+        "binding_condition": "always_when_visible",
+        "binding_type": "collection_details"
+      }
+    ],
+    "button_mappings": [],
+    "clip_offset": [0, 0],
+    "clips_children": false,
+    "controls": [
+      {
+        "default@redstone_decorator_v2.default": {}
+      },
+      {
+        "hover@redstone_decorator_v2.hover": {}
+      },
+      {
+        "pressed@redstone_decorator_v2.pressed": {}
+      },
+      {
+        "button_label@redstone_decorator_v2.button_label": {}
+      }
+    ],
+    "draggable": "not_draggable",
+    "enabled": true,
+    "is_handle_button_move_event": true,
+    "layer": 10,
+    "max_size": [0, 0],
+    "min_size": [0, 0],
+    "offset": [-4, 4],
+    "propagate_alpha": false,
+    "size": [28, 28],
+    "visible": true
+  },
+  "default": {
+    "alpha": "$control_alpha",
+    "is_new_nine_slice": "$is_new_nine_slice",
+    "layer": "$texture_layer",
+    "nine_slice_buttom": "$nine_slice_buttom",
+    "nine_slice_left": "$nine_slice_left",
+    "nine_slice_right": "$nine_slice_right",
+    "nine_slice_top": "$nine_slice_top",
+    "nineslice_size": "$nineslice_size",
+    "texture": "$default_texture",
+    "type": "image"
+  },
+  "hover": {
+    "alpha": "$control_alpha",
+    "is_new_nine_slice": "$is_new_nine_slice",
+    "layer": "$texture_layer",
+    "nine_slice_buttom": "$nine_slice_buttom",
+    "nine_slice_left": "$nine_slice_left",
+    "nine_slice_right": "$nine_slice_right",
+    "nine_slice_top": "$nine_slice_top",
+    "nineslice_size": "$nineslice_size",
+    "texture": "$hover_texture",
+    "type": "image"
+  },
+  "image": {
+    "alpha": 1.0,
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "clip_direction": "left",
+    "clip_offset": [0, 0],
+    "clip_ratio": 0.0,
+    "clips_children": false,
+    "enabled": true,
+    "fill": false,
+    "grayscale": false,
+    "is_new_nine_slice": false,
+    "keep_ratio": false,
+    "layer": 5,
+    "max_size": [0, 0],
+    "min_size": [0, 0],
+    "nine_slice_buttom": 0,
+    "nine_slice_left": 0,
+    "nine_slice_right": 0,
+    "nine_slice_top": 0,
+    "nineslice_size": [0.0, 0.0, 0.0, 0.0],
+    "offset": [0, 0],
+    "propagate_alpha": false,
+    "size": ["80.0%+0.0px", "80.0%+0.0px"],
+    "texture": "textures/ui/common/necklace",
+    "type": "image",
+    "uv": [0, 0],
+    "uv_size": [32, 32],
+    "visible": true
+  },
+  "image0": {
+    "alpha": 1.0,
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "clip_direction": "left",
+    "clip_offset": [0, 0],
+    "clip_ratio": 0.0,
+    "clips_children": false,
+    "enabled": true,
+    "fill": false,
+    "grayscale": false,
+    "is_new_nine_slice": false,
+    "keep_ratio": true,
+    "layer": 10,
+    "max_size": [0, 0],
+    "min_size": [0, 0],
+    "nine_slice_buttom": 0,
+    "nine_slice_left": 0,
+    "nine_slice_right": 0,
+    "nine_slice_top": 0,
+    "nineslice_size": [0, 0, 0, 0],
+    "offset": [46.0, 21.0],
+    "propagate_alpha": false,
+    "size": [16, 16],
+    "texture": "textures/ui/common/decorator_head",
+    "type": "image",
+    "uv": [0, 0],
+    "uv_size": [32, 32],
+    "visible": true
+  },
+  "image1": {
+    "alpha": 1.0,
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "clip_direction": "left",
+    "clip_offset": [0, 0],
+    "clip_ratio": 0.0,
+    "clips_children": false,
+    "enabled": true,
+    "fill": false,
+    "grayscale": false,
+    "is_new_nine_slice": false,
+    "keep_ratio": true,
+    "layer": 10,
+    "max_size": [0, 0],
+    "min_size": [0, 0],
+    "nine_slice_buttom": 0,
+    "nine_slice_left": 0,
+    "nine_slice_right": 0,
+    "nine_slice_top": 0,
+    "nineslice_size": [0, 0, 0, 0],
+    "offset": [41.0, 41.0],
+    "propagate_alpha": false,
+    "size": [16, 16],
+    "texture": "textures/ui/common/decorator_necklace",
+    "type": "image",
+    "uv": [0, 0],
+    "uv_size": [32, 32],
+    "visible": true
+  },
+  "image2": {
+    "alpha": 1.0,
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "clip_direction": "left",
+    "clip_offset": [0, 0],
+    "clip_ratio": 0.0,
+    "clips_children": false,
+    "enabled": true,
+    "fill": false,
+    "grayscale": false,
+    "is_new_nine_slice": false,
+    "keep_ratio": true,
+    "layer": 10,
+    "max_size": [0, 0],
+    "min_size": [0, 0],
+    "nine_slice_buttom": 0,
+    "nine_slice_left": 0,
+    "nine_slice_right": 0,
+    "nine_slice_top": 0,
+    "nineslice_size": [0, 0, 0, 0],
+    "offset": [41.0, 61.0],
+    "propagate_alpha": false,
+    "size": [16, 16],
+    "texture": "textures/ui/common/decorator_belt",
+    "type": "image",
+    "uv": [0, 0],
+    "uv_size": [32, 32],
+    "visible": true
+  },
+  "image3": {
+    "alpha": 1.0,
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "clip_direction": "left",
+    "clip_offset": [0, 0],
+    "clip_ratio": 0.0,
+    "clips_children": false,
+    "enabled": true,
+    "fill": false,
+    "grayscale": false,
+    "is_new_nine_slice": false,
+    "keep_ratio": true,
+    "layer": 10,
+    "max_size": [0, 0],
+    "min_size": [0, 0],
+    "nine_slice_buttom": 0,
+    "nine_slice_left": 0,
+    "nine_slice_right": 0,
+    "nine_slice_top": 0,
+    "nineslice_size": [0, 0, 0, 0],
+    "offset": [46.0, 81.0],
+    "propagate_alpha": false,
+    "size": [16, 16],
+    "texture": "textures/ui/common/decorator_talisman",
+    "type": "image",
+    "uv": [0, 0],
+    "uv_size": [32, 32],
+    "visible": true
+  },
+  "image4": {
+    "alpha": 1.0,
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "clip_direction": "left",
+    "clip_offset": [0, 0],
+    "clip_ratio": 0.0,
+    "clips_children": false,
+    "enabled": true,
+    "fill": false,
+    "grayscale": false,
+    "is_new_nine_slice": false,
+    "keep_ratio": true,
+    "layer": 10,
+    "max_size": [0, 0],
+    "min_size": [0, 0],
+    "nine_slice_buttom": 0,
+    "nine_slice_left": 0,
+    "nine_slice_right": 0,
+    "nine_slice_top": 0,
+    "nineslice_size": [0, 0, 0, 0],
+    "offset": [166.0, 21.0],
+    "propagate_alpha": false,
+    "size": [16, 16],
+    "texture": "textures/ui/common/decorator_cape",
+    "type": "image",
+    "uv": [0, 0],
+    "uv_size": [32, 32],
+    "visible": true
+  },
+  "image5": {
+    "alpha": 1.0,
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "clip_direction": "left",
+    "clip_offset": [0, 0],
+    "clip_ratio": 0.0,
+    "clips_children": false,
+    "enabled": true,
+    "fill": false,
+    "grayscale": false,
+    "is_new_nine_slice": false,
+    "keep_ratio": true,
+    "layer": 10,
+    "max_size": [0, 0],
+    "min_size": [0, 0],
+    "nine_slice_buttom": 0,
+    "nine_slice_left": 0,
+    "nine_slice_right": 0,
+    "nine_slice_top": 0,
+    "nineslice_size": [0, 0, 0, 0],
+    "offset": [171.0, 41.0],
+    "propagate_alpha": false,
+    "size": [16, 16],
+    "texture": "textures/ui/common/decorator_ring",
+    "type": "image",
+    "uv": [0, 0],
+    "uv_size": [32, 32],
+    "visible": true
+  },
+  "image6": {
+    "alpha": 1.0,
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "clip_direction": "left",
+    "clip_offset": [0, 0],
+    "clip_ratio": 0.0,
+    "clips_children": false,
+    "enabled": true,
+    "fill": false,
+    "grayscale": false,
+    "is_new_nine_slice": false,
+    "keep_ratio": true,
+    "layer": 10,
+    "max_size": [0, 0],
+    "min_size": [0, 0],
+    "nine_slice_buttom": 0,
+    "nine_slice_left": 0,
+    "nine_slice_right": 0,
+    "nine_slice_top": 0,
+    "nineslice_size": [0, 0, 0, 0],
+    "offset": [171.0, 61.0],
+    "propagate_alpha": false,
+    "size": [16, 16],
+    "texture": "textures/ui/common/decorator_ring",
+    "type": "image",
+    "uv": [0, 0],
+    "uv_size": [32, 32],
+    "visible": true
+  },
+  "image7": {
+    "alpha": 1.0,
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "clip_direction": "left",
+    "clip_offset": [0, 0],
+    "clip_ratio": 0.0,
+    "clips_children": false,
+    "enabled": true,
+    "fill": false,
+    "grayscale": false,
+    "is_new_nine_slice": false,
+    "keep_ratio": true,
+    "layer": 10,
+    "max_size": [0, 0],
+    "min_size": [0, 0],
+    "nine_slice_buttom": 0,
+    "nine_slice_left": 0,
+    "nine_slice_right": 0,
+    "nine_slice_top": 0,
+    "nineslice_size": [0, 0, 0, 0],
+    "offset": [166.0, 81.0],
+    "propagate_alpha": false,
+    "size": [16, 16],
+    "texture": "textures/ui/common/decorator_avatar",
+    "type": "image",
+    "uv": [0, 0],
+    "uv_size": [32, 32],
+    "visible": true
+  },
+  "main": {
+    "absorbs_input": true,
+    "always_accepts_input": false,
+    "controls": [
+      {
+        "operation@redstone_decorator_v2.operation": {}
+      }
+    ],
+    "force_render_below": false,
+    "is_showing_menu": true,
+    "render_game_behind": true,
+    "render_only_when_topmost": true,
+    "should_steal_mouse": false,
+    "type": "screen"
+  },
+  "namespace": "redstone_decorator_v2",
+  "operation": {
+    "alpha": 1.0,
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "clip_offset": [0, 0],
+    "clips_children": false,
+    "controls": [
+      {
+        "backgroundImage@redstone_decorator_v2.backgroundImage": {}
+      },
+      {
+        "inventory@redstone_common_v3.inventory_grid": {
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle",
+          "offset": [0, -7],
+          "size": ["0.0%+216.0px", "0.0%+96.0px"]
+        }
+      },
+      {
+        "slots@redstone_decorator_v2.slots": {}
+      },
+      {
+        "close@redstone_decorator_v2.close": {}
+      }
+    ],
+    "enabled": true,
+    "layer": 1,
+    "max_size": [0, 0],
+    "min_size": [0, 0],
+    "offset": [0, 0],
+    "propagate_alpha": false,
+    "size": [230, 210],
+    "type": "panel",
+    "visible": true
+  },
+  "pressed": {
+    "alpha": "$control_alpha",
+    "is_new_nine_slice": "$is_new_nine_slice",
+    "layer": "$texture_layer",
+    "nine_slice_buttom": "$nine_slice_buttom",
+    "nine_slice_left": "$nine_slice_left",
+    "nine_slice_right": "$nine_slice_right",
+    "nine_slice_top": "$nine_slice_top",
+    "nineslice_size": "$nineslice_size",
+    "texture": "$pressed_texture",
+    "type": "image"
+  },
+  "preview": {
+    "alpha": 1.0,
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "clip_offset": [0, 0],
+    "clips_children": false,
+    "enabled": true,
+    "layer": 1,
+    "max_size": [0, 0],
+    "min_size": [0, 0],
+    "offset": [0, -10],
+    "propagate_alpha": false,
+    "renderer": "live_player_renderer",
+    "size": [36, 108],
+    "type": "custom",
+    "visible": true
+  },
+  "screen": {
+    "alpha": 1.0,
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "clip_offset": [0, 0],
+    "clips_children": false,
+    "controls": [
+      {
+        "button0@redstone_decorator_v2.button0": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [79, 7],
+          "size": [16, 16]
+        }
+      }
+    ],
+    "enabled": true,
+    "layer": 1,
+    "max_size": [0, 0],
+    "min_size": [0, 0],
+    "offset": [0.0, 0.0],
+    "propagate_alpha": false,
+    "size": ["100%", "100%"],
+    "type": "panel",
+    "visible": true
+  },
+  "screen_pocket": {
+    "alpha": 1.0,
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "clip_offset": [0, 0],
+    "clips_children": false,
+    "controls": [
+      {
+        "button0@redstone_decorator_v2.button0": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [6, 6]
+        }
+      }
+    ],
+    "enabled": true,
+    "layer": 1,
+    "max_size": [0, 0],
+    "min_size": [0, 0],
+    "offset": [0.0, 0.0],
+    "propagate_alpha": false,
+    "size": ["100%", "100%"],
+    "type": "panel",
+    "visible": true
+  },
+  "slots": {
+    "alpha": 1.0,
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "clip_offset": [0, 0],
+    "clips_children": false,
+    "controls": [
+      {
+        "preview@redstone_decorator_v2.preview": {}
+      },
+      {
+        "inheritor0@redstone_common_v3.item_panel_with_background": {
+          "offset": [45, 20],
+          "size": [18, 18]
+        }
+      },
+      {
+        "inheritor1@redstone_common_v3.item_panel_with_background": {
+          "offset": [40, 40],
+          "size": [18, 18]
+        }
+      },
+      {
+        "inheritor2@redstone_common_v3.item_panel_with_background": {
+          "offset": [40, 60],
+          "size": [18, 18]
+        }
+      },
+      {
+        "inheritor3@redstone_common_v3.item_panel_with_background": {
+          "offset": [45, 80.0],
+          "size": [18, 18]
+        }
+      },
+      {
+        "inheritor4@redstone_common_v3.item_panel_with_background": {
+          "offset": [165, 20],
+          "size": [18, 18]
+        }
+      },
+      {
+        "inheritor5@redstone_common_v3.item_panel_with_background": {
+          "offset": [170, 40],
+          "size": [18, 18]
+        }
+      },
+      {
+        "inheritor6@redstone_common_v3.item_panel_with_background": {
+          "offset": [170, 60],
+          "size": [18, 18]
+        }
+      },
+      {
+        "inheritor7@redstone_common_v3.item_panel_with_background": {
+          "offset": [165, 80],
+          "size": [18, 18]
+        }
+      },
+      {
+        "image0@redstone_decorator_v2.image0": {}
+      },
+      {
+        "image1@redstone_decorator_v2.image1": {}
+      },
+      {
+        "image2@redstone_decorator_v2.image2": {}
+      },
+      {
+        "image3@redstone_decorator_v2.image3": {}
+      },
+      {
+        "image4@redstone_decorator_v2.image4": {}
+      },
+      {
+        "image5@redstone_decorator_v2.image5": {}
+      },
+      {
+        "image6@redstone_decorator_v2.image6": {}
+      },
+      {
+        "image7@redstone_decorator_v2.image7": {}
+      }
+    ],
+    "enabled": true,
+    "layer": 1,
+    "max_size": [0, 0],
+    "min_size": [0, 0],
+    "offset": [0, 0],
+    "propagate_alpha": false,
+    "size": ["100.0%+0.0px", "50.0%+0.0px"],
+    "type": "panel",
+    "visible": true
+  }
+}

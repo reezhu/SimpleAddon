@@ -1,0 +1,12 @@
+{
+  "format_version": "1.12.0",
+  "minecraft:geometry": [
+    {
+      "description": {
+        "identifier": "geometry.empty_v4",
+        "texture_width": 1,
+        "texture_height": 1
+      }
+    }
+  ]
+}

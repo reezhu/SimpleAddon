@@ -1,0 +1,56 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:entity": {
+    "component_groups": {},
+    "components": {
+      "minecraft:collision_box": {
+        "height": 0.25,
+        "width": 0.25
+      },
+      "minecraft:physics": {},
+      "minecraft:projectile": {
+        "anchor": 1,
+        "gravity": 0.0,
+        "hit_sound": "",
+        "offset": [
+          0,
+          -0.1,
+          0
+        ],
+        "on_hit": {
+          "arrow_effect": {},
+          "impact_damage": {
+            "damage": 1,
+            "destroy_on_hit": true,
+            "knockback": true,
+            "reflectOnHurt": false,
+            "semi_random_diff_damage": false
+          },
+          "stick_in_ground": {
+            "shake_time": 0.0
+          }
+        },
+        "power": 1.6,
+        "should_bounce": true,
+        "uncertainty_base": 0.0,
+        "uncertainty_multiplier": 0.0
+      },
+      "minecraft:pushable": {
+        "is_pushable": false,
+        "is_pushable_by_piston": false
+      },
+      "netease:custom_entity_type": {
+        "value": "projectile_entity"
+      }
+    },
+    "description": {
+      "identifier": "common:empty_projectile",
+      "is_experimental": false,
+      "is_spawnable": false,
+      "is_summonable": false
+    },
+    "events": {
+      "minecraft:entity_spawned": {}
+    }
+  }
+}

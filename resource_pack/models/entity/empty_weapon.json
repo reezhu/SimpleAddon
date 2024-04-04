@@ -1,0 +1,65 @@
+{
+  "format_version": "1.12.0",
+  "minecraft:geometry": [
+    {
+      "description": {
+        "identifier": "geometry.empty_weapon",
+        "texture_width": 64,
+        "texture_height": 64,
+        "visible_bounds_width": 5,
+        "visible_bounds_height": 3,
+        "visible_bounds_offset": [
+          0,
+          1.5,
+          0
+        ]
+      },
+      "bones": [
+        {
+          "name": "root",
+          "pivot": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "name": "waist",
+          "parent": "root",
+          "pivot": [
+            0,
+            24,
+            0
+          ]
+        },
+        {
+          "name": "rightArm",
+          "parent": "waist",
+          "pivot": [
+            -5,
+            22,
+            -4
+          ]
+        },
+        {
+          "name": "rightItem",
+          "parent": "rightArm",
+          "pivot": [
+            -6,
+            11,
+            -3
+          ]
+        },
+        {
+          "name": "weapons",
+          "parent": "rightItem",
+          "pivot": [
+            -7.5,
+            13.5,
+            0
+          ]
+        }
+      ]
+    }
+  ]
+}

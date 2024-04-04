@@ -1,0 +1,661 @@
+{
+  "background": {
+    "alpha": 1.0,
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "clip_offset": [0, 0],
+    "clips_children": false,
+    "controls": [
+      {
+        "book_frame@redstone_tutorial_v2.book_frame": {}
+      },
+      {
+        "page@redstone_tutorial_v2.page": {}
+      },
+      {
+        "homepage@redstone_tutorial_v2.homepage": {}
+      },
+      {
+        "operation@redstone_tutorial_v2.operation": {}
+      }
+    ],
+    "enabled": true,
+    "layer": 10,
+    "max_size": [0, 0],
+    "min_size": [0, 0],
+    "offset": [-20.0, 0.0],
+    "propagate_alpha": false,
+    "size": [280.0, 210.0],
+    "type": "panel",
+    "visible": true
+  },
+  "book_frame": {
+    "alpha": 1.0,
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "clip_direction": "left",
+    "clip_offset": [0, 0],
+    "clip_ratio": 0.0,
+    "clips_children": false,
+    "enabled": true,
+    "fill": false,
+    "grayscale": false,
+    "is_new_nine_slice": false,
+    "keep_ratio": true,
+    "layer": 1,
+    "max_size": [0, 0],
+    "min_size": [0, 0],
+    "nine_slice_buttom": 0,
+    "nine_slice_left": 0,
+    "nine_slice_right": 0,
+    "nine_slice_top": 0,
+    "nineslice_size": [0, 0, 0, 0],
+    "offset": [0, 0],
+    "propagate_alpha": false,
+    "size": ["100.0%+0.0px", "100.0%+0.0px"],
+    "texture": "textures/ui/book_frame",
+    "type": "image",
+    "uv": [0, 0],
+    "uv_size": [42, 42],
+    "visible": true
+  },
+  "button0@common.button": {
+    "$control_alpha": 1.0,
+    "$default_texture": "textures/netease/common/button/default",
+    "$hover_texture": "textures/netease/common/button/hover",
+    "$is_new_nine_slice": true,
+    "$label_color": [0.0, 0.0, 0.0],
+    "$label_font_scale_factor": 1.049999952316284,
+    "$label_font_size": "normal",
+    "$label_layer": 3,
+    "$label_offset": [0, 0],
+    "$label_text": "第一章",
+    "$nine_slice_buttom": 0,
+    "$nine_slice_left": 0,
+    "$nine_slice_right": 0,
+    "$nine_slice_top": 0,
+    "$nineslice_size": [0, 0, 0, 0],
+    "$pressed_button_name": "%redstone_tutorial_v2.click",
+    "$pressed_texture": "textures/netease/common/button/pressed",
+    "$texture_layer": 2,
+    "alpha": 1.0,
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "bindings": [
+      {
+        "binding_collection_name": "",
+        "binding_condition": "always_when_visible",
+        "binding_type": "collection_details"
+      }
+    ],
+    "button_mappings": [],
+    "clip_offset": [0, 0],
+    "clips_children": false,
+    "controls": [
+      {
+        "default@redstone_tutorial_v2.default": {}
+      },
+      {
+        "hover@redstone_tutorial_v2.hover": {}
+      },
+      {
+        "pressed@redstone_tutorial_v2.pressed": {}
+      },
+      {
+        "button_label@redstone_tutorial_v2.button_label": {}
+      }
+    ],
+    "draggable": "not_draggable",
+    "enabled": true,
+    "is_handle_button_move_event": true,
+    "max_size": [0, 0],
+    "min_size": [0, 0],
+    "offset": [0, 0],
+    "propagate_alpha": false,
+    "size": ["90.0%+0.0px", 25.0],
+    "visible": true
+  },
+  "button_label": {
+    "alpha": "$control_alpha",
+    "color": "$label_color",
+    "font_scale_factor": "$label_font_scale_factor",
+    "font_size": "$label_font_size",
+    "font_type": "smooth",
+    "layer": "$label_layer",
+    "max_size": ["100%", "100%"],
+    "offset": "$label_offset",
+    "shadow": false,
+    "text": "$label_text",
+    "text_alignment": "center",
+    "type": "label"
+  },
+  "close@common.button": {
+    "$control_alpha": 1.0,
+    "$default_texture": "textures/ui/tutorial_v2/close",
+    "$hover_texture": "textures/ui/tutorial_v2/close",
+    "$is_new_nine_slice": false,
+    "$label_color": [1, 1, 1],
+    "$label_font_scale_factor": 1.0,
+    "$label_font_size": "large",
+    "$label_layer": 3,
+    "$label_offset": [0, 0],
+    "$label_text": "",
+    "$nine_slice_buttom": 0,
+    "$nine_slice_left": 0,
+    "$nine_slice_right": 0,
+    "$nine_slice_top": 0,
+    "$nineslice_size": [0, 0, 0, 0],
+    "$pressed_button_name": "%redstone_tutorial_v2.click",
+    "$pressed_texture": "textures/ui/tutorial_v2/close",
+    "$texture_layer": 2,
+    "alpha": 1.0,
+    "anchor_from": "top_right",
+    "anchor_to": "top_right",
+    "bindings": [
+      {
+        "binding_collection_name": "",
+        "binding_condition": "always_when_visible",
+        "binding_type": "collection_details"
+      }
+    ],
+    "button_mappings": [],
+    "clip_offset": [0, 0],
+    "clips_children": false,
+    "controls": [
+      {
+        "default@redstone_tutorial_v2.default": {}
+      },
+      {
+        "hover@redstone_tutorial_v2.hover": {}
+      },
+      {
+        "pressed@redstone_tutorial_v2.pressed": {}
+      },
+      {
+        "button_label@redstone_tutorial_v2.button_label": {}
+      }
+    ],
+    "draggable": "not_draggable",
+    "enabled": true,
+    "is_handle_button_move_event": true,
+    "layer": 1,
+    "max_size": [0, 0],
+    "min_size": [0, 0],
+    "offset": ["1.25%+-8.0px", "-1.9%+6.0px"],
+    "propagate_alpha": false,
+    "size": [17.0, 21.0],
+    "visible": true
+  },
+  "default": {
+    "alpha": "$control_alpha",
+    "is_new_nine_slice": "$is_new_nine_slice",
+    "layer": "$texture_layer",
+    "nine_slice_buttom": "$nine_slice_buttom",
+    "nine_slice_left": "$nine_slice_left",
+    "nine_slice_right": "$nine_slice_right",
+    "nine_slice_top": "$nine_slice_top",
+    "nineslice_size": "$nineslice_size",
+    "texture": "$default_texture",
+    "type": "image"
+  },
+  "grid0": {
+    "alpha": 1.0,
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "clip_offset": [0, 0],
+    "clips_children": false,
+    "collection_name": "test_grid",
+    "enabled": true,
+    "grid_dimensions": [1, 16],
+    "grid_item_template": "redstone_tutorial_v2.button0",
+    "grid_rescaling_type": "none",
+    "layer": 0,
+    "max_size": [0, 0],
+    "maximum_grid_items": 0,
+    "min_size": [0, 0],
+    "offset": [0.0, 0.0],
+    "propagate_alpha": true,
+    "size": ["100.0%+0.0px", 400.0],
+    "type": "grid",
+    "visible": true
+  },
+  "homepage": {
+    "alpha": 1.0,
+    "anchor_from": "right_middle",
+    "anchor_to": "left_middle",
+    "clip_offset": [0, 0],
+    "clips_children": false,
+    "controls": [
+      {
+        "index@redstone_tutorial_v2.index": {}
+      }
+    ],
+    "enabled": true,
+    "layer": 16,
+    "max_size": [0, 0],
+    "min_size": [0, 0],
+    "offset": [0, 0],
+    "propagate_alpha": false,
+    "size": ["20.0%+0.0px", "90.0%+0.0px"],
+    "type": "panel",
+    "visible": true
+  },
+  "hover": {
+    "alpha": "$control_alpha",
+    "is_new_nine_slice": "$is_new_nine_slice",
+    "layer": "$texture_layer",
+    "nine_slice_buttom": "$nine_slice_buttom",
+    "nine_slice_left": "$nine_slice_left",
+    "nine_slice_right": "$nine_slice_right",
+    "nine_slice_top": "$nine_slice_top",
+    "nineslice_size": "$nineslice_size",
+    "texture": "$hover_texture",
+    "type": "image"
+  },
+  "image": {
+    "alpha": 1.0,
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "clip_direction": "left",
+    "clip_offset": [0, 0],
+    "clip_ratio": 0.0,
+    "clips_children": false,
+    "enabled": true,
+    "fill": false,
+    "grayscale": false,
+    "is_new_nine_slice": true,
+    "keep_ratio": true,
+    "layer": 1,
+    "max_size": [0, 0],
+    "min_size": [0, 0],
+    "nine_slice_buttom": 0,
+    "nine_slice_left": 0,
+    "nine_slice_right": 0,
+    "nine_slice_top": 0,
+    "nineslice_size": [0, 0, 0, 0],
+    "offset": [0.0, "-3.0%+2.5px"],
+    "propagate_alpha": false,
+    "size": ["100.0%+-2.0px", "98.0%+5.0px"],
+    "texture": "textures/netease/common/image/default",
+    "type": "image",
+    "uv": [0, 0],
+    "uv_size": [0, 0],
+    "visible": true
+  },
+  "index@common.scrolling_panel": {
+    "$background_nine_slice_buttom": 0,
+    "$background_nine_slice_left": 0,
+    "$background_nine_slice_right": 0,
+    "$background_nine_slice_top": 0,
+    "$background_nineslice_size": [0, 0, 0, 0],
+    "$box_nine_slice_buttom": 0,
+    "$box_nine_slice_left": 0,
+    "$box_nine_slice_right": 0,
+    "$box_nine_slice_top": 0,
+    "$box_nineslice_size": [0, 0, 0, 0],
+    "$is_background_nine_slice": true,
+    "$is_box_nine_slice": false,
+    "$is_track_nine_slice": false,
+    "$scroll_background_image_control": "redstone_tutorial_v2.scroll_background_image",
+    "$scroll_background_texture": "textures/ui/ScrollRail",
+    "$scroll_box_mouse_image_control": "redstone_tutorial_v2.scroll_box_image",
+    "$scroll_box_texture": "textures/ui/newTouchScrollBox",
+    "$scroll_box_touch_image_control": "redstone_tutorial_v2.scroll_box_image",
+    "$scroll_track_image_control": "redstone_tutorial_v2.scroll_track_image",
+    "$scroll_track_texture": "textures/ui/ScrollRail",
+    "$scrolling_content": "redstone_tutorial_v2.grid0",
+    "$show_background": false,
+    "$track_nine_slice_buttom": 0,
+    "$track_nine_slice_left": 0,
+    "$track_nine_slice_right": 0,
+    "$track_nine_slice_top": 0,
+    "$track_nineslice_size": [0, 0, 0, 0],
+    "alpha": 1.0,
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "clip_offset": [0, 0],
+    "clips_children": false,
+    "enabled": true,
+    "layer": 18,
+    "max_size": [0, 0],
+    "min_size": [0, 0],
+    "offset": [0.0, 0.0],
+    "propagate_alpha": true,
+    "size": ["100.0%+0.0px", "100.0%+0.0px"],
+    "type": "scroll_view",
+    "visible": true
+  },
+  "indexed": {
+    "absorbs_input": true,
+    "always_accepts_input": false,
+    "controls": [
+      {
+        "grid0@redstone_tutorial_v2.grid0": {}
+      }
+    ],
+    "force_render_below": false,
+    "is_showing_menu": true,
+    "render_game_behind": true,
+    "render_only_when_topmost": true,
+    "should_steal_mouse": false,
+    "type": "screen"
+  },
+  "indexed2": {
+    "absorbs_input": true,
+    "always_accepts_input": false,
+    "controls": [
+      {
+        "button0@redstone_tutorial_v2.button0": {}
+      }
+    ],
+    "force_render_below": false,
+    "is_showing_menu": true,
+    "render_game_behind": true,
+    "render_only_when_topmost": true,
+    "should_steal_mouse": false,
+    "type": "screen"
+  },
+  "left@common.button": {
+    "$control_alpha": 1.0,
+    "$default_texture": "textures/ui/tutorial_v2/previous",
+    "$hover_texture": "textures/ui/tutorial_v2/previous_page",
+    "$is_new_nine_slice": false,
+    "$label_color": [1, 1, 1],
+    "$label_font_scale_factor": 1.0,
+    "$label_font_size": "large",
+    "$label_layer": 3,
+    "$label_offset": [0, 0],
+    "$label_text": "",
+    "$nine_slice_buttom": 0,
+    "$nine_slice_left": 0,
+    "$nine_slice_right": 0,
+    "$nine_slice_top": 0,
+    "$nineslice_size": [0, 0, 0, 0],
+    "$pressed_button_name": "%redstone_tutorial_v2.click",
+    "$pressed_texture": "textures/ui/tutorial_v2/previous_page",
+    "$texture_layer": 2,
+    "alpha": 1.0,
+    "anchor_from": "bottom_left",
+    "anchor_to": "bottom_left",
+    "bindings": [
+      {
+        "binding_collection_name": "",
+        "binding_condition": "always_when_visible",
+        "binding_type": "collection_details"
+      }
+    ],
+    "button_mappings": [],
+    "clip_offset": [0, 0],
+    "clips_children": false,
+    "controls": [
+      {
+        "default@redstone_tutorial_v2.default": {}
+      },
+      {
+        "hover@redstone_tutorial_v2.hover": {}
+      },
+      {
+        "pressed@redstone_tutorial_v2.pressed": {}
+      },
+      {
+        "button_label@redstone_tutorial_v2.button_label": {}
+      }
+    ],
+    "draggable": "not_draggable",
+    "enabled": true,
+    "is_handle_button_move_event": true,
+    "layer": 1,
+    "max_size": [0, 0],
+    "min_size": [0, 0],
+    "offset": ["-2.19%+10.0px", "-8.0%+12.0px"],
+    "propagate_alpha": false,
+    "size": [21.0, 20.0],
+    "visible": true
+  },
+  "main": {
+    "absorbs_input": true,
+    "always_accepts_input": false,
+    "controls": [
+      {
+        "background@redstone_tutorial_v2.background": {}
+      }
+    ],
+    "force_render_below": true,
+    "is_showing_menu": true,
+    "render_game_behind": true,
+    "render_only_when_topmost": true,
+    "should_steal_mouse": false,
+    "type": "screen"
+  },
+  "namespace": "redstone_tutorial_v2",
+  "operation": {
+    "alpha": 1.0,
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "clip_offset": [0, 0],
+    "clips_children": false,
+    "controls": [
+      {
+        "left@redstone_tutorial_v2.left": {}
+      },
+      {
+        "right@redstone_tutorial_v2.right": {}
+      },
+      {
+        "close@redstone_tutorial_v2.close": {}
+      }
+    ],
+    "enabled": true,
+    "layer": 10,
+    "max_size": [0, 0],
+    "min_size": [0, 0],
+    "offset": [0.0, -1.0],
+    "propagate_alpha": false,
+    "size": ["100.0%+0.0px", "100.0%+0.0px"],
+    "type": "panel",
+    "visible": true
+  },
+  "page": {
+    "alpha": 1.0,
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "clip_offset": [0, 0],
+    "clips_children": false,
+    "controls": [
+      {
+        "image@redstone_tutorial_v2.image": {}
+      },
+      {
+        "paginationLeft@redstone_tutorial_v2.paginationLeft": {}
+      },
+      {
+        "paginationRight@redstone_tutorial_v2.paginationRight": {}
+      },
+      {
+        "text@redstone_tutorial_v2.text": {}
+      }
+    ],
+    "enabled": true,
+    "layer": 1,
+    "max_size": [0, 0],
+    "min_size": [0, 0],
+    "offset": [0, 0],
+    "propagate_alpha": false,
+    "size": ["93.75%+0.0px", "85.71%+0.0px"],
+    "type": "panel",
+    "visible": true
+  },
+  "paginationLeft": {
+    "alpha": 1.0,
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "clip_offset": [0, 0],
+    "clips_children": false,
+    "color": [0.3098039215686275, 0.2274509803921569, 0.1686274509803922],
+    "enabled": true,
+    "font_scale_factor": 0.6999999880790710,
+    "font_size": "normal",
+    "font_type": "smooth",
+    "layer": 3,
+    "line_padding": 0.0,
+    "max_size": [0, 0],
+    "min_size": [0, 0],
+    "offset": ["0.0%+-62.0px", "0.0%+97.0px"],
+    "propagate_alpha": false,
+    "shadow": false,
+    "size": [68.0, 18.0],
+    "text": "1/30",
+    "text_alignment": "center",
+    "type": "label",
+    "visible": true
+  },
+  "paginationRight": {
+    "alpha": 1.0,
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "clip_offset": [0, 0],
+    "clips_children": false,
+    "color": [0.3098039215686275, 0.2274509803921569, 0.1686274509803922],
+    "enabled": true,
+    "font_scale_factor": 0.6999999880790710,
+    "font_size": "normal",
+    "font_type": "smooth",
+    "layer": 3,
+    "line_padding": 0.0,
+    "max_size": [0, 0],
+    "min_size": [0, 0],
+    "offset": ["0.0%+59.0px", "0.0%+96.0px"],
+    "propagate_alpha": false,
+    "shadow": false,
+    "size": [68.0, 18.0],
+    "text": "2/30",
+    "text_alignment": "center",
+    "type": "label",
+    "visible": true
+  },
+  "pressed": {
+    "alpha": "$control_alpha",
+    "is_new_nine_slice": "$is_new_nine_slice",
+    "layer": "$texture_layer",
+    "nine_slice_buttom": "$nine_slice_buttom",
+    "nine_slice_left": "$nine_slice_left",
+    "nine_slice_right": "$nine_slice_right",
+    "nine_slice_top": "$nine_slice_top",
+    "nineslice_size": "$nineslice_size",
+    "texture": "$pressed_texture",
+    "type": "image"
+  },
+  "right@common.button": {
+    "$control_alpha": 1.0,
+    "$default_texture": "textures/ui/tutorial_v2/next",
+    "$hover_texture": "textures/ui/tutorial_v2/next_page",
+    "$is_new_nine_slice": false,
+    "$label_color": [1, 1, 1],
+    "$label_font_scale_factor": 1.0,
+    "$label_font_size": "large",
+    "$label_layer": 3,
+    "$label_offset": [0, 0],
+    "$label_text": "",
+    "$nine_slice_buttom": 0,
+    "$nine_slice_left": 0,
+    "$nine_slice_right": 0,
+    "$nine_slice_top": 0,
+    "$nineslice_size": [0, 0, 0, 0],
+    "$pressed_button_name": "%redstone_tutorial_v2.click",
+    "$pressed_texture": "textures/ui/tutorial_v2/next_page",
+    "$texture_layer": 2,
+    "alpha": 1.0,
+    "anchor_from": "bottom_right",
+    "anchor_to": "bottom_right",
+    "bindings": [
+      {
+        "binding_collection_name": "",
+        "binding_condition": "always_when_visible",
+        "binding_type": "collection_details"
+      }
+    ],
+    "button_mappings": [],
+    "clip_offset": [0, 0],
+    "clips_children": false,
+    "controls": [
+      {
+        "default@redstone_tutorial_v2.default": {}
+      },
+      {
+        "hover@redstone_tutorial_v2.hover": {}
+      },
+      {
+        "pressed@redstone_tutorial_v2.pressed": {}
+      },
+      {
+        "button_label@redstone_tutorial_v2.button_label": {}
+      }
+    ],
+    "draggable": "not_draggable",
+    "enabled": true,
+    "is_handle_button_move_event": true,
+    "layer": 1,
+    "max_size": [0, 0],
+    "min_size": [0, 0],
+    "offset": ["2.19%+-9.0px", "-8.0%+15.0px"],
+    "propagate_alpha": false,
+    "size": [24.0, 24.0],
+    "visible": true
+  },
+  "scroll_background_image": {
+    "is_new_nine_slice": "$is_background_nine_slice",
+    "nine_slice_buttom": "$background_nine_slice_buttom",
+    "nine_slice_left": "$background_nine_slice_left",
+    "nine_slice_right": "$background_nine_slice_right",
+    "nine_slice_top": "$background_nine_slice_top",
+    "nineslice_size": "$background_nineslice_size",
+    "texture": "$scroll_background_texture",
+    "type": "image"
+  },
+  "scroll_box_image": {
+    "is_new_nine_slice": "$is_box_nine_slice",
+    "nine_slice_buttom": "$box_nine_slice_buttom",
+    "nine_slice_left": "$box_nine_slice_left",
+    "nine_slice_right": "$box_nine_slice_right",
+    "nine_slice_top": "$box_nine_slice_top",
+    "nineslice_size": "$box_nineslice_size",
+    "texture": "$scroll_box_texture",
+    "type": "image"
+  },
+  "scroll_track_image": {
+    "is_new_nine_slice": "$is_track_nine_slice",
+    "layer": 3,
+    "nine_slice_buttom": "$track_nine_slice_buttom",
+    "nine_slice_left": "$track_nine_slice_left",
+    "nine_slice_right": "$track_nine_slice_right",
+    "nine_slice_top": "$track_nine_slice_top",
+    "nineslice_size": "$track_nineslice_size",
+    "size": [3, "100%"],
+    "texture": "$scroll_track_texture",
+    "type": "image"
+  },
+  "text": {
+    "alpha": 1.0,
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "clip_offset": [0, 0],
+    "clips_children": false,
+    "color": [1, 1, 1],
+    "enabled": true,
+    "font_scale_factor": 1.0,
+    "font_size": "normal",
+    "font_type": "smooth",
+    "layer": 2,
+    "line_padding": 0.0,
+    "max_size": [0, 0],
+    "min_size": [0, 0],
+    "offset": [0, 0],
+    "propagate_alpha": false,
+    "shadow": false,
+    "size": ["100.0%+0.0px", "100.0%+0.0px"],
+    "text": "",
+    "text_alignment": "left",
+    "type": "label",
+    "visible": true
+  }
+}
