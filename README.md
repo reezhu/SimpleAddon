@@ -93,3 +93,9 @@
 
 如有bug请及时反馈
 
+### 协议
+<p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://github.com/reezhu/SimpleAddon">SimpleAddon</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://github.com/reezhu">Ree</a> is licensed under <a href="http://creativecommons.org/licenses/by-nd/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-ND 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nd.svg?ref=chooser-v1"></a></p>
+
+说明：
+为了避免mod冲突，选择了ND来禁止对公共模块的修改，这里特别规定，修改behavior_pack/pythonScripts/share/ModConfig.py文件以及新增模块的行为不受ND限制
+也就是说，你可以自由fork这个项目，在此基础上添加自己的module，并配置在ModConfig中，并用于商用目的，但是禁止进行二次发布，如果你想分享你编写的模块，可以提交pr加入主分支
