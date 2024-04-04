@@ -165,11 +165,13 @@ blacklist = ['animations/tpos.animation_v2.json',
 def duplicateCheck():
     clean = False
     for path in blacklist:
-        if os.path.exists(os.path.join(RESOURCE_ROOT, path)):
-            print "ERROR:为了避免mod之间冲突，将会删除", os.path.join(RESOURCE_ROOT, path)
-            break
+        path = os.path.join(RESOURCE_ROOT, path.replace("/", "\\"))
+        if os.path.exists(path):
+            print "ERROR:为了避免mod之间冲突，将会删除", path
+            os.remove(path)
+            clean = True
     if clean:
-        print "已删除不允许修改部分资源，这部分资源会在公共的依赖中提供，请在发布的明显位置提示玩家下载即可"
+        print "WARNING: 已删除不允许修改部分资源，这部分资源会在公共的依赖中提供，请在发布的明显位置提示玩家下载即可"
 
 
 if __name__ == "__main__":
