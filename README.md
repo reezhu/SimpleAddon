@@ -107,7 +107,7 @@
 
 这个框架在不同版本间只能更新module部分，所以system部分禁止修改，如需修改需要所有mod更新才能保证正确加载
 
-讨论群：点击链接加入群聊【SimpleAddon小鸡万能模板】：http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=PK_y6I_gmxeVRVLdKvWLhZY3SHIWw5-w&authKey=eqSO1E0I7507yZt6tYqIIj8WpLActBPhoKHcgHtL9EmKNbij87nVKMOk4zGSRHs%2F&noverify=0&group_code=762863314
+讨论群：点击链接加入群聊[SimpleAddon小鸡万能模板](http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=PK_y6I_gmxeVRVLdKvWLhZY3SHIWw5-w&authKey=eqSO1E0I7507yZt6tYqIIj8WpLActBPhoKHcgHtL9EmKNbij87nVKMOk4zGSRHs%2F&noverify=0&group_code=762863314)
 
 ### 协议
 <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://github.com/reezhu/SimpleAddon">SimpleAddon</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://github.com/reezhu">Ree</a> is licensed under <a href="http://creativecommons.org/licenses/by-nd/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-ND 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nd.svg?ref=chooser-v1"></a></p>
