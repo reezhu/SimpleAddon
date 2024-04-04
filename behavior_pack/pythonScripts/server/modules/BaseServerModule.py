@@ -92,4 +92,4 @@ class BaseServerModule(object):
         self._system.BroadcastToAllClient(event, data)
 
     def printEvent(self, args):
-        print "onEvent: ", args
+        print "onEvent: ", args if type(args) is dict else args.__dict__

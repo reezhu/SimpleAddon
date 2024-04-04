@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 # @Author  : Ree
-# 请勿修改此配置！
+# 请勿修改此配置！！！！！！！
 # 如需增加配置，可以写在ModConfig中，已提前导入各个模块，别名为config
 
 ServerSystemName = "MasterServerServiceProvider"
