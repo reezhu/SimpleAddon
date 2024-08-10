@@ -4,8 +4,8 @@ utils = None
 """事件注解工具类"""
 
 
-def Vanilla(event_name):
-    # type: (str) -> classmethod
+def Vanilla(event_name, module_name):
+    # type: (str, str) -> classmethod
     """
     监听原版事件
     :param event_name: 事件str名
@@ -14,14 +14,14 @@ def Vanilla(event_name):
 
     def add_event(method):
         system = utils.getSystem()
-        system._vanillaEvents.append((event_name, method))
+        system._vanillaEvents.append((event_name, method, module_name))
         return method
 
     return add_event
 
 
-def Server(event_name):
-    # type: (str) -> classmethod
+def Server(event_name, module_name):
+    # type: (str, str) -> classmethod
     """
     监听来自服务端的事件
     :param event_name: 事件的str名
@@ -30,13 +30,13 @@ def Server(event_name):
 
     def add_event(method):
         system = utils.getSystem()
-        system._serverEvents.append((event_name, method))
+        system._serverEvents.append((event_name, method, module_name))
         return method
 
     return add_event
 
 
-def Client(event_name):
+def Client(event_name, module_name):
     # type: (str) -> classmethod
     """
     监听来自客户端的事件
@@ -46,7 +46,7 @@ def Client(event_name):
 
     def add_event(method):
         system = utils.getSystem()
-        system._clientEvents.append((event_name, method))
+        system._clientEvents.append((event_name, method, module_name))
         return method
 
     return add_event
@@ -57,12 +57,13 @@ def Wrapper(cls):
     """
     将事件包装为面向对象的object方便调用
     :param cls: 事件的类（注意不要括号！）
-    客户端事件参考pythonScripts/share/api/ClientEvents.py
-    服务端事件参考pythonScripts/share/api/ServerEvents.py
+    客户端事件参考cloudpeakSkywarsScripts/share/api/ClientEvents.py
+    服务端事件参考cloudpeakSkywarsScripts/share/api/ServerEvents.py
     :return:
     """
 
     def decorator_function(original_function):
+
         def wrapper_function(self, args):
             _args = cls()
             _args.__dict__.update(args)

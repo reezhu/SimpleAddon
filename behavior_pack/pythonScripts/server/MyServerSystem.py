@@ -3,7 +3,6 @@
 import mod.server.extraServerApi as serverApi
 from mod.server.serverEvent import ServerEvent
 from mod.server.system.serverSystem import ServerSystem
-
 from pythonScripts.server.modules.BaseServerModule import BaseServerModule
 from pythonScripts.share import EventRegisterUtils as Event
 
@@ -15,28 +14,42 @@ class MyServerSystem(ServerSystem):
         self.__modules = {}
         self.__loading = True
         self.__data = {}
-        self.ListenForEvent(serverApi.GetEngineNamespace(), serverApi.GetEngineSystemName(), ServerEvent.LoadServerAddonScriptsAfter, self, self.LoadServerAddonScriptsAfter)
+        self.ListenForEvent(
+            serverApi.GetEngineNamespace(),
+            serverApi.GetEngineSystemName(),
+            ServerEvent.LoadServerAddonScriptsAfter,
+            self,
+            self.LoadServerAddonScriptsAfter,
+        )
         from pythonScripts.server import ServerUtils
+
         Event.utils = ServerUtils
         self._vanillaEvents = []
         self._clientEvents = []
         self._serverEvents = []
 
-    def registerModule(self, module, name=None, version=0):
+    def registerModule(self, module, name, version=0):
         # type: (BaseServerModule,str,int) -> None
-        vanillaEvents = self._vanillaEvents
-        clientEvents = self._clientEvents
-        serveraEvents = self._serverEvents
-        self._vanillaEvents = []
-        self._clientEvents = []
-        self._serverEvents = []
-        name = name if name is not None else module.__class__.__module__ + "." + module.__class__.__name__
         if name not in self.__modules or version > self.__modules[name][1]:
             self.__modules[name] = (module, version)
-            module._vanillaEvents = vanillaEvents
-            module._clientEvents = clientEvents
-            module._serverEvents = serveraEvents
-            print("registered server module:", name, ",version:", version, ",module:", module)
+            module._vanillaEvents = [
+                (x[0], x[1]) for x in self._vanillaEvents if x[2] == name
+            ]
+            module._clientEvents = [
+                (x[0], x[1]) for x in self._clientEvents if x[2] == name
+            ]
+            module._serverEvents = [
+                (x[0], x[1]) for x in self._serverEvents if x[2] == name
+            ]
+            print("module", module, module._vanillaEvents)
+            print(
+                "registered server module:",
+                name,
+                ",version:",
+                version,
+                ",module:",
+                module,
+            )
 
     def getModule(self, name):
         if type(name) != str:
