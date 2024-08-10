@@ -3,9 +3,14 @@
 utils = None
 """事件注解工具类"""
 
+try:
+    from typing import *
+except ImportError:
+    pass
+
 
 def Vanilla(event_name, module_name):
-    # type: (str, str) -> classmethod
+    # type: (str, str) -> Callable
     """
     监听原版事件
     :param event_name: 事件str名
@@ -21,7 +26,7 @@ def Vanilla(event_name, module_name):
 
 
 def Server(event_name, module_name):
-    # type: (str, str) -> classmethod
+    # type: (str, str) -> Callable
     """
     监听来自服务端的事件
     :param event_name: 事件的str名
@@ -37,7 +42,7 @@ def Server(event_name, module_name):
 
 
 def Client(event_name, module_name):
-    # type: (str) -> classmethod
+    # type: (str) -> Callable
     """
     监听来自客户端的事件
     :param event_name: 事件的str名
