@@ -1,5 +1,5 @@
-# -*- coding: utf-8 -*- 
-# decompiled in 2024-04-04 03:09:27 
+# -*- coding: utf-8 -*-
+# decompiled in 2024-04-04 03:09:27
 
 
 class ClientChestCloseEvent(object):
@@ -14,13 +14,13 @@ class ClientChestOpenEvent(object):
 
     def __init__(self):
         # 玩家实体id
-        self.playerId = None  # type: str  
+        self.playerId = None  # type: str
         # 箱子位置x值
-        self.x = None  # type: int  
+        self.x = None  # type: int
         # 箱子位置y值
-        self.y = None  # type: int  
+        self.y = None  # type: int
         # 箱子位置z值
-        self.z = None  # type: int  
+        self.z = None  # type: int
 
 
 class ClientPlayerInventoryCloseEvent(object):
@@ -35,9 +35,9 @@ class ClientPlayerInventoryOpenEvent(object):
 
     def __init__(self):
         # 是否是创造模式背包界面
-        self.isCreative = None  # type: bool  
+        self.isCreative = None  # type: bool
         # 取消打开物品背包界面
-        self.cancel = None  # type: bool  
+        self.cancel = None  # type: bool
 
 
 class GridComponentSizeChangedClientEvent(object):
@@ -52,7 +52,7 @@ class OnItemSlotButtonClickedEvent(object):
 
     def __init__(self):
         # 点击的物品槽的编号
-        self.slotIndex = None  # type: int  
+        self.slotIndex = None  # type: int
 
 
 class PlayerChatButtonClickClientEvent(object):
@@ -67,7 +67,7 @@ class PopScreenEvent(object):
 
     def __init__(self):
         # UI名字
-        self.screenName = None  # type: str  
+        self.screenName = None  # type: str
 
 
 class PushScreenEvent(object):
@@ -75,7 +75,7 @@ class PushScreenEvent(object):
 
     def __init__(self):
         # UI名字
-        self.screenName = None  # type: str  
+        self.screenName = None  # type: str
 
 
 class UiInitFinished(object):
@@ -90,23 +90,23 @@ class AddEntityClientEvent(object):
 
     def __init__(self):
         # 实体id
-        self.id = None  # type: str  
+        self.id = None  # type: str
         # 位置x
-        self.posX = None  # type: float  
+        self.posX = None  # type: float
         # 位置y
-        self.posY = None  # type: float  
+        self.posY = None  # type: float
         # 位置z
-        self.posZ = None  # type: float  
+        self.posZ = None  # type: float
         # 实体维度
-        self.dimensionId = None  # type: int  
+        self.dimensionId = None  # type: int
         # 是否为幼儿
-        self.isBaby = None  # type: bool  
+        self.isBaby = None  # type: bool
         # 实体类型
-        self.engineTypeStr = None  # type: str  
+        self.engineTypeStr = None  # type: str
         # 物品identifier（仅当物品实体时存在该字段）
-        self.itemName = None  # type: str  
+        self.itemName = None  # type: str
         # 物品附加值（仅当物品实体时存在该字段）
-        self.auxValue = None  # type: int  
+        self.auxValue = None  # type: int
 
 
 class AddPlayerAOIClientEvent(object):
@@ -114,7 +114,7 @@ class AddPlayerAOIClientEvent(object):
 
     def __init__(self):
         # 玩家id
-        self.playerId = None  # type: str  
+        self.playerId = None  # type: str
 
 
 class AddPlayerCreatedClientEvent(object):
@@ -122,7 +122,7 @@ class AddPlayerCreatedClientEvent(object):
 
     def __init__(self):
         # 玩家id
-        self.playerId = None  # type: str  
+        self.playerId = None  # type: str
 
 
 class ChunkAcquireDiscardedClientEvent(object):
@@ -130,11 +130,11 @@ class ChunkAcquireDiscardedClientEvent(object):
 
     def __init__(self):
         # 区块所在维度
-        self.dimension = None  # type: int  
+        self.dimension = None  # type: int
         # 区块的x坐标，对应方块X坐标区间为[x * 16, x * 16 + 15]
-        self.chunkPosX = None  # type: int  
+        self.chunkPosX = None  # type: int
         # 区块的z坐标，对应方块Z坐标区间为[z * 16, z * 16 + 15]
-        self.chunkPosZ = None  # type: int  
+        self.chunkPosZ = None  # type: int
 
 
 class ChunkLoadedClientEvent(object):
@@ -142,11 +142,11 @@ class ChunkLoadedClientEvent(object):
 
     def __init__(self):
         # 区块所在维度
-        self.dimension = None  # type: int  
+        self.dimension = None  # type: int
         # 区块的x坐标，对应方块X坐标区间为[x * 16, x * 16 + 15]
-        self.chunkPosX = None  # type: int  
+        self.chunkPosX = None  # type: int
         # 区块的z坐标，对应方块Z坐标区间为[z * 16, z * 16 + 15]
-        self.chunkPosZ = None  # type: int  
+        self.chunkPosZ = None  # type: int
 
 
 class LoadClientAddonScriptsAfter(object):
@@ -161,7 +161,7 @@ class OnLocalPlayerStopLoading(object):
 
     def __init__(self):
         # 加载完成的玩家id
-        self.playerId = None  # type: str  
+        self.playerId = None  # type: str
 
 
 class OnScriptTickClient(object):
@@ -176,7 +176,7 @@ class RemoveEntityClientEvent(object):
 
     def __init__(self):
         # 移除的实体id
-        self.id = None  # type: str  
+        self.id = None  # type: str
 
 
 class RemovePlayerAOIClientEvent(object):
@@ -184,7 +184,7 @@ class RemovePlayerAOIClientEvent(object):
 
     def __init__(self):
         # 玩家id
-        self.playerId = None  # type: str  
+        self.playerId = None  # type: str
 
 
 class UnLoadClientAddonScriptsBefore(object):
@@ -199,9 +199,9 @@ class ApproachEntityClientEvent(object):
 
     def __init__(self):
         # 玩家实体id
-        self.playerId = None  # type: str  
+        self.playerId = None  # type: str
         # 靠近的生物实体id
-        self.entityId = None  # type: str  
+        self.entityId = None  # type: str
 
 
 class EntityModelChangedClientEvent(object):
@@ -209,11 +209,11 @@ class EntityModelChangedClientEvent(object):
 
     def __init__(self):
         # 实体id
-        self.entityId = None  # type: str  
+        self.entityId = None  # type: str
         # 新的模型名字
-        self.newModel = None  # type: str  
+        self.newModel = None  # type: str
         # 原来的模型名字
-        self.oldModel = None  # type: str  
+        self.oldModel = None  # type: str
 
 
 class HealthChangeClientEvent(object):
@@ -221,15 +221,15 @@ class HealthChangeClientEvent(object):
 
     def __init__(self):
         # 实体id
-        self.entityId = None  # type: str  
+        self.entityId = None  # type: str
         # 变化前的生命值
-        self.from_ = None  # type: float  
+        self.from_ = None  # type: float
         # 变化后的生命值
-        self.to = None  # type: float  
+        self.to = None  # type: float
 
     def __getattr__(self, item):
-        if item == 'from_':
-            return self.__dict__.get('from')
+        if item == "from_":
+            return self.__dict__.get("from")
         else:
             return self.__dict__.get(item)
 
@@ -239,9 +239,9 @@ class LeaveEntityClientEvent(object):
 
     def __init__(self):
         # 玩家实体id
-        self.playerId = None  # type: str  
+        self.playerId = None  # type: str
         # 远离的生物实体id
-        self.entityId = None  # type: str  
+        self.entityId = None  # type: str
 
 
 class OnGroundClientEvent(object):
@@ -249,7 +249,7 @@ class OnGroundClientEvent(object):
 
     def __init__(self):
         # 实体id
-        self.id = None  # type: str  
+        self.id = None  # type: str
 
 
 class StartRidingClientEvent(object):
@@ -257,9 +257,9 @@ class StartRidingClientEvent(object):
 
     def __init__(self):
         # 骑乘者的唯一ID
-        self.actorId = None  # type: str  
+        self.actorId = None  # type: str
         # 被骑乘实体的唯一ID
-        self.victimId = None  # type: str  
+        self.victimId = None  # type: str
 
 
 class ClientJumpButtonPressDownEvent(object):
@@ -267,7 +267,7 @@ class ClientJumpButtonPressDownEvent(object):
 
     def __init__(self):
         # 设置是否执行跳跃逻辑
-        self.continueJump = None  # type: bool  
+        self.continueJump = None  # type: bool
 
 
 class ClientJumpButtonReleaseEvent(object):
@@ -296,7 +296,7 @@ class HoldBeforeClientEvent(object):
 
     def __init__(self):
         # 设置为True可拦截原版的挖方块/使用物品/与实体交互响应
-        self.cancel = None  # type: bool  
+        self.cancel = None  # type: bool
 
 
 class LeftClickBeforeClientEvent(object):
@@ -304,7 +304,7 @@ class LeftClickBeforeClientEvent(object):
 
     def __init__(self):
         # 设置为True可拦截原版的挖方块或攻击响应
-        self.cancel = None  # type: bool  
+        self.cancel = None  # type: bool
 
 
 class LeftClickReleaseClientEvent(object):
@@ -340,7 +340,7 @@ class OnKeyPressInGame(object):
 
     def __init__(self):
         # 当前screenName
-        self.screenName = None  # type: str  
+        self.screenName = None  # type: str
         # 键码（注：这里的int型被转成了str型，比如"1"对应的就是枚举值文档中的1），详见[KeyBoardType枚举](../枚举值/KeyBoardType.md)
         self.key = None  # type: str
         # 是否按下，按下为1，弹起为0
@@ -352,7 +352,7 @@ class RightClickBeforeClientEvent(object):
 
     def __init__(self):
         # 设置为True可拦截原版的物品使用/实体交互响应
-        self.cancel = None  # type: bool  
+        self.cancel = None  # type: bool
 
 
 class RightClickReleaseClientEvent(object):
@@ -367,7 +367,7 @@ class TapBeforeClientEvent(object):
 
     def __init__(self):
         # 设置为True可拦截原版的攻击或放置响应
-        self.cancel = None  # type: bool  
+        self.cancel = None  # type: bool
 
 
 class TapOrHoldReleaseClientEvent(object):
@@ -382,19 +382,19 @@ class ClientBlockUseEvent(object):
 
     def __init__(self):
         # 玩家Id
-        self.playerId = None  # type: str  
+        self.playerId = None  # type: str
         # 方块的identifier，包含命名空间及名称
-        self.blockName = None  # type: str  
+        self.blockName = None  # type: str
         # 方块附加值
-        self.aux = None  # type: int  
+        self.aux = None  # type: int
         # 设置为True可拦截与方块交互的逻辑。
-        self.cancel = None  # type: bool  
+        self.cancel = None  # type: bool
         # 方块x坐标
-        self.x = None  # type: int  
+        self.x = None  # type: int
         # 方块y坐标
-        self.y = None  # type: int  
+        self.y = None  # type: int
         # 方块z坐标
-        self.z = None  # type: int  
+        self.z = None  # type: int
 
 
 class FallingBlockCauseDamageBeforeClientEvent(object):
@@ -402,27 +402,27 @@ class FallingBlockCauseDamageBeforeClientEvent(object):
 
     def __init__(self):
         # 下落的方块实体id
-        self.fallingBlockId = None  # type: int  
+        self.fallingBlockId = None  # type: int
         # 下落的方块实体位置x
-        self.fallingBlockX = None  # type: float  
+        self.fallingBlockX = None  # type: float
         # 下落的方块实体位置y
-        self.fallingBlockY = None  # type: float  
+        self.fallingBlockY = None  # type: float
         # 下落的方块实体位置z
-        self.fallingBlockZ = None  # type: float  
+        self.fallingBlockZ = None  # type: float
         # 重力方块的identifier，包含命名空间及名称
-        self.blockName = None  # type: str  
+        self.blockName = None  # type: str
         # 下落的方块实体维度id
-        self.dimensionId = None  # type: int  
+        self.dimensionId = None  # type: int
         # 当前碰撞到的实体列表id（客户端只能获取到玩家），如果没有的话是None
-        self.collidingEntitys = None  # type: list(str)  
+        self.collidingEntitys = None  # type: list(str)
         # 下落的方块实体持续下落了多少tick
-        self.fallTickAmount = None  # type: int  
+        self.fallTickAmount = None  # type: int
         # 下落的方块实体持续下落了多少距离
-        self.fallDistance = None  # type: float  
+        self.fallDistance = None  # type: float
         # 客户端始终为false，因为客户端不会计算伤害值
-        self.isHarmful = None  # type: bool  
+        self.isHarmful = None  # type: bool
         # 对实体的伤害
-        self.fallDamage = None  # type: int  
+        self.fallDamage = None  # type: int
 
 
 class OnAfterFallOnBlockClientEvent(object):
@@ -430,23 +430,23 @@ class OnAfterFallOnBlockClientEvent(object):
 
     def __init__(self):
         # 实体id
-        self.entityId = None  # type: str  
+        self.entityId = None  # type: str
         # 实体位置x
-        self.posX = None  # type: float  
+        self.posX = None  # type: float
         # 实体位置y
-        self.posY = None  # type: float  
+        self.posY = None  # type: float
         # 实体位置z
-        self.posZ = None  # type: float  
+        self.posZ = None  # type: float
         # 瞬时移动X方向的力
-        self.motionX = None  # type: float  
+        self.motionX = None  # type: float
         # 瞬时移动Y方向的力
-        self.motionY = None  # type: float  
+        self.motionY = None  # type: float
         # 瞬时移动Z方向的力
-        self.motionZ = None  # type: float  
+        self.motionZ = None  # type: float
         # 方块的identifier，包含命名空间及名称
-        self.blockName = None  # type: str  
+        self.blockName = None  # type: str
         # 是否按脚本层传值计算力
-        self.calculate = None  # type: bool  
+        self.calculate = None  # type: bool
 
 
 class OnEntityInsideBlockClientEvent(object):
@@ -454,25 +454,25 @@ class OnEntityInsideBlockClientEvent(object):
 
     def __init__(self):
         # 实体id
-        self.entityId = None  # type: str  
+        self.entityId = None  # type: str
         # 实体所在维度id
-        self.dimensionId = None  # type: int  
+        self.dimensionId = None  # type: int
         # 实体移速X方向的减速比例
-        self.slowdownMultiX = None  # type: float  
+        self.slowdownMultiX = None  # type: float
         # 实体移速Y方向的减速比例
-        self.slowdownMultiY = None  # type: float  
+        self.slowdownMultiY = None  # type: float
         # 实体移速Z方向的减速比例
-        self.slowdownMultiZ = None  # type: float  
+        self.slowdownMultiZ = None  # type: float
         # 方块位置x
-        self.blockX = None  # type: int  
+        self.blockX = None  # type: int
         # 方块位置y
-        self.blockY = None  # type: int  
+        self.blockY = None  # type: int
         # 方块位置z
-        self.blockZ = None  # type: int  
+        self.blockZ = None  # type: int
         # 方块的identifier，包含命名空间及名称
-        self.blockName = None  # type: str  
+        self.blockName = None  # type: str
         # 可由脚本层回传True给引擎，阻止触发后续原版逻辑
-        self.cancel = None  # type: bool  
+        self.cancel = None  # type: bool
 
 
 class OnStandOnBlockClientEvent(object):
@@ -480,31 +480,31 @@ class OnStandOnBlockClientEvent(object):
 
     def __init__(self):
         # 实体id
-        self.entityId = None  # type: str  
+        self.entityId = None  # type: str
         # 实体所在维度id
-        self.dimensionId = None  # type: int  
+        self.dimensionId = None  # type: int
         # 实体位置x
-        self.posX = None  # type: float  
+        self.posX = None  # type: float
         # 实体位置y
-        self.posY = None  # type: float  
+        self.posY = None  # type: float
         # 实体位置z
-        self.posZ = None  # type: float  
+        self.posZ = None  # type: float
         # 瞬时移动X方向的力
-        self.motionX = None  # type: float  
+        self.motionX = None  # type: float
         # 瞬时移动Y方向的力
-        self.motionY = None  # type: float  
+        self.motionY = None  # type: float
         # 瞬时移动Z方向的力
-        self.motionZ = None  # type: float  
+        self.motionZ = None  # type: float
         # 方块位置x
-        self.blockX = None  # type: int  
+        self.blockX = None  # type: int
         # 方块位置y
-        self.blockY = None  # type: int  
+        self.blockY = None  # type: int
         # 方块位置z
-        self.blockZ = None  # type: int  
+        self.blockZ = None  # type: int
         # 方块的identifier，包含命名空间及名称
-        self.blockName = None  # type: str  
+        self.blockName = None  # type: str
         # 可由脚本层回传True给引擎，阻止触发后续原版逻辑
-        self.cancel = None  # type: bool  
+        self.cancel = None  # type: bool
 
 
 class PlayerTryDestroyBlockClientEvent(object):
@@ -512,21 +512,21 @@ class PlayerTryDestroyBlockClientEvent(object):
 
     def __init__(self):
         # 方块x坐标
-        self.x = None  # type: int  
+        self.x = None  # type: int
         # 方块y坐标
-        self.y = None  # type: int  
+        self.y = None  # type: int
         # 方块z坐标
-        self.z = None  # type: int  
+        self.z = None  # type: int
         # 方块被敲击的面向id，参考[Facing枚举](../枚举值/Facing.md)
-        self.face = None  # type: int  
+        self.face = None  # type: int
         # 方块的identifier，包含命名空间及名称
-        self.blockName = None  # type: str  
+        self.blockName = None  # type: str
         # 方块附加值
-        self.auxData = None  # type: int  
+        self.auxData = None  # type: int
         # 试图破坏方块的玩家ID
-        self.playerId = None  # type: str  
+        self.playerId = None  # type: str
         # 默认为False，在脚本层设置为True就能取消该方块的破坏
-        self.cancel = None  # type: bool  
+        self.cancel = None  # type: bool
 
 
 class ShearsDestoryBlockBeforeClientEvent(object):
@@ -534,25 +534,25 @@ class ShearsDestoryBlockBeforeClientEvent(object):
 
     def __init__(self):
         # 方块位置x
-        self.blockX = None  # type: int  
+        self.blockX = None  # type: int
         # 方块位置y
-        self.blockY = None  # type: int  
+        self.blockY = None  # type: int
         # 方块位置z
-        self.blockZ = None  # type: int  
+        self.blockZ = None  # type: int
         # 方块的identifier，包含命名空间及名称
-        self.blockName = None  # type: str  
+        self.blockName = None  # type: str
         # 方块附加值
-        self.auxData = None  # type: int  
+        self.auxData = None  # type: int
         # 触发剪刀效果的掉落物identifier，包含命名空间及名称
-        self.dropName = None  # type: str  
+        self.dropName = None  # type: str
         # 触发剪刀效果的掉落物数量
-        self.dropCount = None  # type: int  
+        self.dropCount = None  # type: int
         # 触发剪刀效果的玩家id
-        self.playerId = None  # type: str  
+        self.playerId = None  # type: str
         # 玩家触发时的维度id
-        self.dimensionId = None  # type: int  
+        self.dimensionId = None  # type: int
         # 是否取消剪刀效果
-        self.cancelShears = None  # type: bool  
+        self.cancelShears = None  # type: bool
 
 
 class StartDestroyBlockClientEvent(object):
@@ -560,15 +560,15 @@ class StartDestroyBlockClientEvent(object):
 
     def __init__(self):
         # 方块的坐标
-        self.pos = None  # type: tuple(float,float,float)  
+        self.pos = None  # type: tuple(float,float,float)
         # 方块的identifier，包含命名空间及名称
-        self.blockName = None  # type: str  
+        self.blockName = None  # type: str
         # 方块的附加值
-        self.auxValue = None  # type: int  
+        self.auxValue = None  # type: int
         # 玩家id
-        self.playerId = None  # type: str  
+        self.playerId = None  # type: str
         # 修改为True时，可阻止玩家进入挖方块的状态。需要与StartDestroyBlockServerEvent一起修改。
-        self.cancel = None  # type: bool  
+        self.cancel = None  # type: bool
 
 
 class StepOffBlockClientEvent(object):
@@ -576,17 +576,17 @@ class StepOffBlockClientEvent(object):
 
     def __init__(self):
         # 方块x坐标
-        self.blockX = None  # type: int  
+        self.blockX = None  # type: int
         # 方块y坐标
-        self.blockY = None  # type: int  
+        self.blockY = None  # type: int
         # 方块z坐标
-        self.blockZ = None  # type: int  
+        self.blockZ = None  # type: int
         # 触发的entity的唯一ID
-        self.entityId = None  # type: str  
+        self.entityId = None  # type: str
         # 方块的identifier，包含命名空间及名称
-        self.blockName = None  # type: str  
+        self.blockName = None  # type: str
         # 维度id
-        self.dimensionId = None  # type: int  
+        self.dimensionId = None  # type: int
 
 
 class AttackAnimBeginClientEvent(object):
@@ -594,7 +594,7 @@ class AttackAnimBeginClientEvent(object):
 
     def __init__(self):
         # 实体id
-        self.id = None  # type: str  
+        self.id = None  # type: str
 
 
 class AttackAnimEndClientEvent(object):
@@ -602,7 +602,7 @@ class AttackAnimEndClientEvent(object):
 
     def __init__(self):
         # 实体id
-        self.id = None  # type: str  
+        self.id = None  # type: str
 
 
 class WalkAnimBeginClientEvent(object):
@@ -610,7 +610,7 @@ class WalkAnimBeginClientEvent(object):
 
     def __init__(self):
         # 实体id
-        self.id = None  # type: str  
+        self.id = None  # type: str
 
 
 class WalkAnimEndClientEvent(object):
@@ -618,7 +618,7 @@ class WalkAnimEndClientEvent(object):
 
     def __init__(self):
         # 实体id
-        self.id = None  # type: str  
+        self.id = None  # type: str
 
 
 class ActorAcquiredItemClientEvent(object):
@@ -626,13 +626,13 @@ class ActorAcquiredItemClientEvent(object):
 
     def __init__(self):
         # 获得物品玩家实体id
-        self.actor = None  # type: str  
+        self.actor = None  # type: str
         # 物品给予者玩家实体id，如果不存在给予者的话，这里为空字符串
-        self.secondaryActor = None  # type: str  
+        self.secondaryActor = None  # type: str
         # 获取到的物品的<a href="../../../mcguide/20-玩法开发/10-基本概念/1-我的世界基础概念.html#物品信息字典#物品信息字典">物品信息字典</a>
-        self.itemDict = None  # type: dict  
+        self.itemDict = None  # type: dict
         # 获得物品的方法，详见[ItemAcquisitionMethod](../枚举值/ItemAcquisitionMethod.md)
-        self.acquireMethod = None  # type: int  
+        self.acquireMethod = None  # type: int
 
 
 class ActorUseItemClientEvent(object):
@@ -640,11 +640,11 @@ class ActorUseItemClientEvent(object):
 
     def __init__(self):
         # 玩家实体id
-        self.playerId = None  # type: str  
+        self.playerId = None  # type: str
         # 使用的物品的<a href="../../../mcguide/20-玩法开发/10-基本概念/1-我的世界基础概念.html#物品信息字典#物品信息字典">物品信息字典</a>
-        self.itemDict = None  # type: dict  
+        self.itemDict = None  # type: dict
         # 使用物品的方法，详见[ItemUseMethodEnum枚举](../枚举值/ItemUseMethodEnum.md)
-        self.useMethod = None  # type: int  
+        self.useMethod = None  # type: int
 
 
 class AnvilCreateResultItemAfterClientEvent(object):
@@ -652,15 +652,15 @@ class AnvilCreateResultItemAfterClientEvent(object):
 
     def __init__(self):
         # 玩家实体id
-        self.playerId = None  # type: str  
+        self.playerId = None  # type: str
         # 合成后的物品显示名称
-        self.itemShowName = None  # type: str  
+        self.itemShowName = None  # type: str
         # 合成后的物品的<a href="../../../mcguide/20-玩法开发/10-基本概念/1-我的世界基础概念.html#物品信息字典#物品信息字典">物品信息字典</a>
-        self.itemDict = None  # type: dict  
+        self.itemDict = None  # type: dict
         # 合成前的物品的<a href="../../../mcguide/20-玩法开发/10-基本概念/1-我的世界基础概念.html#物品信息字典#物品信息字典">物品信息字典</a>（铁砧内第一个物品）
-        self.oldItemDict = None  # type: dict  
+        self.oldItemDict = None  # type: dict
         # 合成所使用材料的<a href="../../../mcguide/20-玩法开发/10-基本概念/1-我的世界基础概念.html#物品信息字典#物品信息字典">物品信息字典</a>（铁砧内第二个物品）
-        self.materialItemDict = None  # type: dict  
+        self.materialItemDict = None  # type: dict
 
 
 class ClientItemTryUseEvent(object):
@@ -668,11 +668,11 @@ class ClientItemTryUseEvent(object):
 
     def __init__(self):
         # 玩家id
-        self.playerId = None  # type: str  
+        self.playerId = None  # type: str
         # 使用的物品的<a href="../../../mcguide/20-玩法开发/10-基本概念/1-我的世界基础概念.html#物品信息字典#物品信息字典">物品信息字典</a>
-        self.itemDict = None  # type: dict  
+        self.itemDict = None  # type: dict
         # 取消使用物品
-        self.cancel = None  # type: bool  
+        self.cancel = None  # type: bool
 
 
 class ClientItemUseOnEvent(object):
@@ -680,29 +680,29 @@ class ClientItemUseOnEvent(object):
 
     def __init__(self):
         # 玩家实体id
-        self.entityId = None  # type: str  
+        self.entityId = None  # type: str
         # 使用的物品的<a href="../../../mcguide/20-玩法开发/10-基本概念/1-我的世界基础概念.html#物品信息字典#物品信息字典">物品信息字典</a>
-        self.itemDict = None  # type: dict  
+        self.itemDict = None  # type: dict
         # 方块 x 坐标值
-        self.x = None  # type: int  
+        self.x = None  # type: int
         # 方块 y 坐标值
-        self.y = None  # type: int  
+        self.y = None  # type: int
         # 方块 z 坐标值
-        self.z = None  # type: int  
+        self.z = None  # type: int
         # 方块的identifier
-        self.blockName = None  # type: str  
+        self.blockName = None  # type: str
         # 方块的附加值
-        self.blockAuxValue = None  # type: int  
+        self.blockAuxValue = None  # type: int
         # 点击方块的面，参考[Facing枚举](../枚举值/Facing.md)
-        self.face = None  # type: int  
+        self.face = None  # type: int
         # 点击点的x比例位置
-        self.clickX = None  # type: float  
+        self.clickX = None  # type: float
         # 点击点的y比例位置
-        self.clickY = None  # type: float  
+        self.clickY = None  # type: float
         # 点击点的z比例位置
-        self.clickZ = None  # type: float  
+        self.clickZ = None  # type: float
         # 设为True可取消物品的使用
-        self.ret = None  # type: bool  
+        self.ret = None  # type: bool
 
 
 class ClientShapedRecipeTriggeredEvent(object):
@@ -710,7 +710,7 @@ class ClientShapedRecipeTriggeredEvent(object):
 
     def __init__(self):
         # 配方id，对应配方json文件中的identifier字段
-        self.recipeId = None  # type: str  
+        self.recipeId = None  # type: str
 
 
 class GrindStoneRemovedEnchantClientEvent(object):
@@ -718,15 +718,15 @@ class GrindStoneRemovedEnchantClientEvent(object):
 
     def __init__(self):
         # 玩家实体id
-        self.playerId = None  # type: str  
+        self.playerId = None  # type: str
         # 合成前的物品<a href="../../../mcguide/20-玩法开发/10-基本概念/1-我的世界基础概念.html#物品信息字典#物品信息字典">物品信息字典</a>（砂轮内第一个物品）
-        self.oldItemDict = None  # type: dict  
+        self.oldItemDict = None  # type: dict
         # 作为合成材料的物品<a href="../../../mcguide/20-玩法开发/10-基本概念/1-我的世界基础概念.html#物品信息字典#物品信息字典">物品信息字典</a>（砂轮内第二个物品）
-        self.additionalItemDict = None  # type: dict  
+        self.additionalItemDict = None  # type: dict
         # 合成后的物品<a href="../../../mcguide/20-玩法开发/10-基本概念/1-我的世界基础概念.html#物品信息字典#物品信息字典">物品信息字典</a>
-        self.newItemDict = None  # type: dict  
+        self.newItemDict = None  # type: dict
         # 本次合成返还的经验
-        self.exp = None  # type: int  
+        self.exp = None  # type: int
 
 
 class InventoryItemChangedClientEvent(object):
@@ -734,13 +734,13 @@ class InventoryItemChangedClientEvent(object):
 
     def __init__(self):
         # 玩家实体id
-        self.playerId = None  # type: str  
+        self.playerId = None  # type: str
         # 背包槽位
-        self.slot = None  # type: int  
+        self.slot = None  # type: int
         # 变化前槽位中的物品，格式参考<a href="../../../mcguide/20-玩法开发/10-基本概念/1-我的世界基础概念.html#物品信息字典#物品信息字典">物品信息字典</a>
-        self.oldItemDict = None  # type: dict  
+        self.oldItemDict = None  # type: dict
         # 变化后槽位中的物品，格式参考<a href="../../../mcguide/20-玩法开发/10-基本概念/1-我的世界基础概念.html#物品信息字典#物品信息字典">物品信息字典</a>
-        self.newItemDict = None  # type: dict  
+        self.newItemDict = None  # type: dict
 
 
 class ItemReleaseUsingClientEvent(object):
@@ -748,15 +748,15 @@ class ItemReleaseUsingClientEvent(object):
 
     def __init__(self):
         # 玩家id
-        self.playerId = None  # type: str  
+        self.playerId = None  # type: str
         # 蓄力剩余时间(当物品缺少"minecraft:maxduration"组件时,蓄力剩余时间为负数)
-        self.durationLeft = None  # type: float  
+        self.durationLeft = None  # type: float
         # 使用的物品的<a href="../../../mcguide/20-玩法开发/10-基本概念/1-我的世界基础概念.html#物品信息字典#物品信息字典">物品信息字典</a>
-        self.itemDict = None  # type: dict  
+        self.itemDict = None  # type: dict
         # 最大蓄力时长
-        self.maxUseDuration = None  # type: int  
+        self.maxUseDuration = None  # type: int
         # 设置为True可以取消，需要同时取消服务端事件[ItemReleaseUsingServerEvent](#itemreleaseusingserverevent)
-        self.cancel = None  # type: bool  
+        self.cancel = None  # type: bool
 
 
 class OnCarriedNewItemChangedClientEvent(object):
@@ -764,7 +764,7 @@ class OnCarriedNewItemChangedClientEvent(object):
 
     def __init__(self):
         # 切换后物品的<a href="../../../mcguide/20-玩法开发/10-基本概念/1-我的世界基础概念.html#物品信息字典#物品信息字典">物品信息字典</a>
-        self.itemDict = None  # type: dict  
+        self.itemDict = None  # type: dict
 
 
 class PlayerTryDropItemClientEvent(object):
@@ -772,11 +772,11 @@ class PlayerTryDropItemClientEvent(object):
 
     def __init__(self):
         # 玩家id
-        self.playerId = None  # type: str  
+        self.playerId = None  # type: str
         # 物品dict
-        self.itemDict = None  # type: dict  
+        self.itemDict = None  # type: dict
         # 是否取消此次操作
-        self.cancel = None  # type: bool  
+        self.cancel = None  # type: bool
 
 
 class StartUsingItemClientEvent(object):
@@ -784,9 +784,9 @@ class StartUsingItemClientEvent(object):
 
     def __init__(self):
         # 玩家实体id
-        self.playerId = None  # type: str  
+        self.playerId = None  # type: str
         # 使用的物品的<a href="../../../mcguide/20-玩法开发/10-基本概念/1-我的世界基础概念.html#物品信息字典#物品信息字典">物品信息字典</a>
-        self.itemDict = None  # type: dict  
+        self.itemDict = None  # type: dict
 
 
 class StopUsingItemClientEvent(object):
@@ -794,9 +794,9 @@ class StopUsingItemClientEvent(object):
 
     def __init__(self):
         # 玩家实体id
-        self.playerId = None  # type: str  
+        self.playerId = None  # type: str
         # 使用的物品的<a href="../../../mcguide/20-玩法开发/10-基本概念/1-我的世界基础概念.html#物品信息字典#物品信息字典">物品信息字典</a>
-        self.itemDict = None  # type: dict  
+        self.itemDict = None  # type: dict
 
 
 class DimensionChangeClientEvent(object):
@@ -804,23 +804,23 @@ class DimensionChangeClientEvent(object):
 
     def __init__(self):
         # 玩家实体id
-        self.playerId = None  # type: str  
+        self.playerId = None  # type: str
         # 维度改变前的维度
-        self.fromDimensionId = None  # type: int  
+        self.fromDimensionId = None  # type: int
         # 维度改变后的维度
-        self.toDimensionId = None  # type: int  
+        self.toDimensionId = None  # type: int
         # 改变前的位置x
-        self.fromX = None  # type: float  
+        self.fromX = None  # type: float
         # 改变前的位置Y
-        self.fromY = None  # type: float  
+        self.fromY = None  # type: float
         # 改变前的位置Z
-        self.fromZ = None  # type: float  
+        self.fromZ = None  # type: float
         # 改变后的位置x
-        self.toX = None  # type: float  
+        self.toX = None  # type: float
         # 改变后的位置Y
-        self.toY = None  # type: float  
+        self.toY = None  # type: float
         # 改变后的位置Z
-        self.toZ = None  # type: float  
+        self.toZ = None  # type: float
 
 
 class DimensionChangeFinishClientEvent(object):
@@ -828,13 +828,13 @@ class DimensionChangeFinishClientEvent(object):
 
     def __init__(self):
         # 玩家实体id
-        self.playerId = None  # type: str  
+        self.playerId = None  # type: str
         # 维度改变前的维度
-        self.fromDimensionId = None  # type: int  
+        self.fromDimensionId = None  # type: int
         # 维度改变后的维度
-        self.toDimensionId = None  # type: int  
+        self.toDimensionId = None  # type: int
         # 改变后的位置x,y,z,其中y值为脚底加上角色的身高值
-        self.toPos = None  # type: tuple(float,float,float)  
+        self.toPos = None  # type: tuple(float,float,float)
 
 
 class ExtinguishFireClientEvent(object):
@@ -842,11 +842,11 @@ class ExtinguishFireClientEvent(object):
 
     def __init__(self):
         # 火焰方块的坐标
-        self.pos = None  # type: tuple(float,float,float)  
+        self.pos = None  # type: tuple(float,float,float)
         # 玩家id
-        self.playerId = None  # type: str  
+        self.playerId = None  # type: str
         # 修改为True时，可阻止玩家扑灭火焰。需要与ExtinguishFireServerEvent一起修改。
-        self.cancel = None  # type: bool  
+        self.cancel = None  # type: bool
 
 
 class GameTypeChangedClientEvent(object):
@@ -854,11 +854,11 @@ class GameTypeChangedClientEvent(object):
 
     def __init__(self):
         # 玩家Id
-        self.playerId = None  # type: str  
+        self.playerId = None  # type: str
         # 切换前的游戏模式
-        self.oldGameType = None  # type: int  
+        self.oldGameType = None  # type: int
         # 切换后的游戏模式
-        self.newGameType = None  # type: int  
+        self.newGameType = None  # type: int
 
 
 class OnPlayerHitBlockClientEvent(object):
@@ -866,17 +866,17 @@ class OnPlayerHitBlockClientEvent(object):
 
     def __init__(self):
         # 碰撞到方块的玩家Id
-        self.playerId = None  # type: str  
+        self.playerId = None  # type: str
         # 碰撞方块x坐标
-        self.posX = None  # type: int  
+        self.posX = None  # type: int
         # 碰撞方块y坐标
-        self.posY = None  # type: int  
+        self.posY = None  # type: int
         # 碰撞方块z坐标
-        self.posZ = None  # type: int  
+        self.posZ = None  # type: int
         # 碰撞方块的identifier
-        self.blockId = None  # type: str  
+        self.blockId = None  # type: str
         # 碰撞方块的附加值
-        self.auxValue = None  # type: int  
+        self.auxValue = None  # type: int
 
 
 class OnMusicStopClientEvent(object):
@@ -884,7 +884,7 @@ class OnMusicStopClientEvent(object):
 
     def __init__(self):
         # 音乐名称
-        self.musicName = None  # type: str  
+        self.musicName = None  # type: str
 
 
 class PlayMusicClientEvent(object):
@@ -892,9 +892,9 @@ class PlayMusicClientEvent(object):
 
     def __init__(self):
         # 即资源包中sounds/music_definitions.json中的event_name，并且对应sounds/sound_definitions.json中的key
-        self.name = None  # type: str  
+        self.name = None  # type: str
         # 设为True可屏蔽该次音效播放
-        self.cancel = None  # type: bool  
+        self.cancel = None  # type: bool
 
 
 class PlaySoundClientEvent(object):
@@ -902,12 +902,12 @@ class PlaySoundClientEvent(object):
 
     def __init__(self):
         # 即资源包中sounds/sound_definitions.json中的key
-        self.name = None  # type: str  
+        self.name = None  # type: str
         # 音效播放的位置。UI音效为(0,0,0)
-        self.pos = None  # type: tuple(float,float,float)  
+        self.pos = None  # type: tuple(float,float,float)
         # 音量，范围为0-1
-        self.volume = None  # type: float  
+        self.volume = None  # type: float
         # 播放速度，正常速度为1
-        self.pitch = None  # type: float  
+        self.pitch = None  # type: float
         # 设为True可屏蔽该次音效播放
         self.cancel = None  # type: bool

@@ -143,12 +143,12 @@ class TrackerEffect(BaseEffect):
 
 
 reflectMotion = {
-    0: lambda (x, y, z): (x, -y, z),
-    1: lambda (x, y, z): (x, -y, z),
-    2: lambda (x, y, z): (x, y, -z),
-    3: lambda (x, y, z): (x, y, -z),
-    4: lambda (x, y, z): (-x, y, z),
-    5: lambda (x, y, z): (-x, y, z),
+    0: lambda x_y_z: (x_y_z[0], -x_y_z[1], x_y_z[2]),
+    1: lambda x_y_z1: (x_y_z1[0], -x_y_z1[1], x_y_z1[2]),
+    2: lambda x_y_z2: (x_y_z2[0], x_y_z2[1], -x_y_z2[2]),
+    3: lambda x_y_z3: (x_y_z3[0], x_y_z3[1], -x_y_z3[2]),
+    4: lambda x_y_z4: (-x_y_z4[0], x_y_z4[1], x_y_z4[2]),
+    5: lambda x_y_z5: (-x_y_z5[0], x_y_z5[1], x_y_z5[2]),
 }
 
 
@@ -341,12 +341,12 @@ class ReplaceAreaBlockEffect(BaseEffect):
     def replaceOneBlock(self, playerId, blockPos, originBlockName, targetItemName, iscreative=False):
         targetSlotId, itemDict = self.__searchItemFromInv(playerId, targetItemName)
         if not itemDict:
-            print("no item dict", targetItemName)
+            print(("no item dict", targetItemName))
             return
 
         block = utils.getBlock(playerId, blockPos)
         if not block:
-            print("no block", blockPos)
+            print(("no block", blockPos))
             return
 
         itemName = itemDict["itemName"]
@@ -411,7 +411,7 @@ class SmeltingEffect(BaseEffect):
 
         smeltingResult, smeltingResult_aux, isBlock = self.__getSmeltingResult(originBlock, smeltingTimes)
         if smeltingResult is None:
-            print("smelting result not found", originBlock["name"], smeltingTimes)
+            print(("smelting result not found", originBlock["name"], smeltingTimes))
             return
 
         if isBlock:
@@ -423,7 +423,7 @@ class SmeltingEffect(BaseEffect):
             utils.dropItemDict(dimension, originPos, itemDict)
 
     def __getSmeltingResult(self, originBlock, smeltingTimes):
-        print("input ", originBlock, smeltingTimes)
+        print(("input ", originBlock, smeltingTimes))
         name = originBlock['name']
         aux = originBlock['aux']
         result_name, result_aux, isblock = None, None, None
@@ -503,7 +503,7 @@ class RepayEffect(BaseEffect):
             return
 
         newHealth = min(maxHealth, health + self.__repay)
-        print("repay effect", maxHealth, health, newHealth)
+        print(("repay effect", maxHealth, health, newHealth))
         utils.setEntityAttr(playerId, serverApi.GetMinecraftEnum().AttrType.HEALTH, newHealth)
 
 

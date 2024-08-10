@@ -35,7 +35,7 @@ class UiProxyScreen(ModularProxyScreen):
         """
         创建时绑定已生成的按钮，并进行一些初始化功能
         """
-        print "UiScreen created"
+        print("UiScreen created")
         button = ImageButton(self, "button0")
         button.SetButtonTouchUpCallback(self.open)
 

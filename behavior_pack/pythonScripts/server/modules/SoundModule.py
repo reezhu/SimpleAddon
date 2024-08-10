@@ -13,6 +13,9 @@ class SoundModule(BaseServerModule):
 
     def example(self, system):
         # 攻击时播放的音效
-        system.addData(StaticConfig.Data.SOUND_ATTACK, {
-            "minecraft:diamond_sword": {"sound": "random.glass"},
-        })
+        system.addData(
+            StaticConfig.Data.SOUND_ATTACK,
+            {
+                "minecraft:diamond_sword": {"sound": "random.glass"},
+            },
+        )

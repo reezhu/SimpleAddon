@@ -11,6 +11,6 @@ from pythonScripts.tool_offline.OfflineToolLinkTemplate import linkShaderFolder
 """
 if __name__ == '__main__':
     targetResourcePath = os.path.abspath(os.path.join(RESOURCE_ROOT, "shaders"))
-    print targetResourcePath
+    print(targetResourcePath)
 
     linkShaderFolder("glsl", targetResourcePath)

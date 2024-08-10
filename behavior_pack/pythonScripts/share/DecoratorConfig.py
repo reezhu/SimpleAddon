@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 # @Author  : Ree
 
+
 # 用于标记格子类型
 class SlotType:
     HEADWEAR = "headwear"  # 头饰

@@ -45,7 +45,7 @@ def recursiveDel(parent):
         if os.path.isdir(file):
             recursiveDel(file)
     if len(os.listdir(parent)) <= 0 and not (parent.endswith("textures") or parent.endswith("entities") or parent.endswith("entity")):
-        print "delete rubbish", parent
+        print("delete rubbish", parent)
         os.rmdir(parent)
 
 
@@ -167,11 +167,11 @@ def duplicateCheck():
     for path in blacklist:
         path = os.path.join(RESOURCE_ROOT, path.replace("/", "\\"))
         if os.path.exists(path):
-            print "ERROR:为了避免mod之间冲突，将会删除", path
+            print("ERROR:为了避免mod之间冲突，将会删除", path)
             os.remove(path)
             clean = True
     if clean:
-        print "WARNING: 已删除不允许修改部分资源，这部分资源会在公共的依赖中提供，请在发布的明显位置提示玩家下载即可"
+        print("WARNING: 已删除不允许修改部分资源，这部分资源会在公共的依赖中提供，请在发布的明显位置提示玩家下载即可")
 
 
 if __name__ == "__main__":
@@ -182,4 +182,4 @@ if __name__ == "__main__":
     listTextures()
     duplicateCheck()
     if os.path.exists(os.path.join(BEHAVIOR_ROOT, "pythonScripts")):
-        print "WARNING: 你需要重命名pythonScripts以避免自测时组件之间的冲突！！！！！！！！!"
+        print("WARNING: 你需要重命名pythonScripts以避免自测时组件之间的冲突！！！！！！！！!")

@@ -13,7 +13,9 @@ class ProjectileModule(BaseServerModule):
     def __init__(self):
         super(ProjectileModule, self).__init__()
 
-    def shoot(self, playerId, spellList, costCallback=None, costTips=False, damageBooster=None):
+    def shoot(
+        self, playerId, spellList, costCallback=None, costTips=False, damageBooster=None
+    ):
         """
         发射一个自定义子弹
         :param playerId: 发射的玩家

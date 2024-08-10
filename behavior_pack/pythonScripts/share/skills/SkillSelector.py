@@ -10,13 +10,22 @@ from pythonScripts.share import VectorUtils
 
 class TargetSelector(object):
     @staticmethod
-    def ALL(entityId, pos, rot): return True  # 选择全体
+    def ALL(entityId, pos, rot):
+        return True  # 选择全体
 
     @staticmethod
-    def FORWARD(entityId, pos, rot): return VectorUtils.dot(VectorUtils.minus(ServerUtils.getPos(entityId), pos), rot) > 0  # 选择前方
+    def FORWARD(entityId, pos, rot):
+        return (
+            VectorUtils.dot(VectorUtils.minus(ServerUtils.getPos(entityId), pos), rot)
+            > 0
+        )  # 选择前方
 
     @staticmethod
-    def BACKWARD(entityId, pos, rot): return VectorUtils.dot(VectorUtils.minus(ServerUtils.getPos(entityId), pos), rot) < 0  # 选择后方
+    def BACKWARD(entityId, pos, rot):
+        return (
+            VectorUtils.dot(VectorUtils.minus(ServerUtils.getPos(entityId), pos), rot)
+            < 0
+        )  # 选择后方
 
 
 class VictimSelector(object):

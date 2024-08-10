@@ -54,13 +54,31 @@ class StandModule(BaseClientModule):
 
         pass
 
-    def addDecorator(self, playerId, key, vanillaGeometry, tposGeometry, vanillaTexture, tposTexture, vanillaMaterial, tposMaterial):
+    def addDecorator(
+        self,
+        playerId,
+        key,
+        vanillaGeometry,
+        tposGeometry,
+        vanillaTexture,
+        tposTexture,
+        vanillaMaterial,
+        tposMaterial,
+    ):
         pass
 
     def removeDecorator(self, playerId, key):
         pass
 
-    def playAnimation(self, playerId, animation, t=-1, callback=None, first_animation=None, singleton=False):
+    def playAnimation(
+        self,
+        playerId,
+        animation,
+        t=-1,
+        callback=None,
+        first_animation=None,
+        singleton=False,
+    ):
         """
         播放动画
         :param playerId:

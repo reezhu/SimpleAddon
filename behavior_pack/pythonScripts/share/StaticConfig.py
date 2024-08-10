@@ -230,8 +230,12 @@ class Event:
     # 通知服务端进行了飞行（内部功能）
     FlyEnabledEvent = ServiceDomain + "FlyEnabledEvent"
     # 转发原版事件
-    ForwardOnCarriedNewItemChangedServerEvent = ServiceDomain + "F:OnCarriedNewItemChangedServerEvent"
-    ForwardOnNewArmorExchangeServerEvent = ServiceDomain + "F:OnNewArmorExchangeServerEvent"
+    ForwardOnCarriedNewItemChangedServerEvent = (
+        ServiceDomain + "F:OnCarriedNewItemChangedServerEvent"
+    )
+    ForwardOnNewArmorExchangeServerEvent = (
+        ServiceDomain + "F:OnNewArmorExchangeServerEvent"
+    )
     # 冻结玩家操作
     LockPlayerOperationEvent = ServiceDomain + "LockPlayerOperationEvent"
     # 播放粒子

@@ -6,7 +6,7 @@ import os
 def _find_resource_folder(root_path):
     for root, dirs, files in os.walk(root_path):
         for name in dirs:
-            if 'resource' in name.lower():
+            if "resource" in name.lower():
                 return os.path.join(root, name)
     return None
 

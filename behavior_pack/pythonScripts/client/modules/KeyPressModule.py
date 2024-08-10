@@ -6,7 +6,7 @@ from pythonScripts.client.modules.BaseClientModule import *
 
 
 def response(args):
-    print "question is ", args
+    print("question is ", args)
     return {"answer": "pong"}
 
 
@@ -26,22 +26,22 @@ class KeyPressModule(BaseClientModule):
         # type: (EventObj.OnKeyPressInGame) -> None
 
         if data.isDown == "0":
-            print "OnKeyPressInGame", data.__dict__
+            print("OnKeyPressInGame", data.__dict__)
             if data.key == "100":
                 utils.getModule(StaticConfig.Module.InventorySelector).pop(callback=lambda index, item: index % 2 == 0, filter=lambda item: True)
             elif data.key == "101":
                 # rpc模块的例子
                 def callback(args):
-                    print "answer is ", args
+                    print("answer is ", args)
 
                 utils.getModule(StaticConfig.Module.Rpc).sendRequest(response, {"question": "ping", }, callback)
             elif data.key == "102":
                 # 同步模块的例子
                 module = utils.getModule(StaticConfig.Module.Sync)  # type:SyncApi
-                print "before test", module.getAll(clientApi.GetLocalPlayerId())
+                print("before test", module.getAll(clientApi.GetLocalPlayerId()))
                 from random import random
                 def onCallback():
-                    print "after test", module.getAll(clientApi.GetLocalPlayerId())
+                    print("after test", module.getAll(clientApi.GetLocalPlayerId()))
 
                 utils.getModule(StaticConfig.Module.Scheduler).runFuncTaskLater(1, onCallback)
                 module.set(clientApi.GetLocalPlayerId(), "test", random(), override=True)
@@ -50,16 +50,16 @@ class KeyPressModule(BaseClientModule):
                 self.profile_server = not self.profile_server
                 if self.profile_server:
                     clientApi.StartProfile()
-                    print "Start Client Profile"
+                    print("Start Client Profile")
                 else:
                     clientApi.StopProfile("flame_client.html")
-                    print "Stop Client Profile"
+                    print("Stop Client Profile")
             elif data.key == "105":
                 self.profile_client = not self.profile_client
                 import mod.server.extraServerApi as serverApi
                 if self.profile_client:
                     serverApi.StartProfile()
-                    print "Start Server Profile"
+                    print("Start Server Profile")
                 else:
                     serverApi.StopProfile("flame_server.html")
-                    print "Stop Server Profile"
+                    print("Stop Server Profile")

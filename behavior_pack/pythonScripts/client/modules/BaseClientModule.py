@@ -94,4 +94,4 @@ class BaseClientModule(object):
         self._system.NotifyToServer(event, eventData)
 
     def printEvent(self, args):
-        print "onEvent: ", args if type(args) is dict else args.__dict__
+        print("onEvent: ", args if type(args) is dict else args.__dict__)

@@ -7,7 +7,7 @@
 # version    ：python 2.7
 # Description：通用抽奖模块，抽奖池结构和使用见example
 """
-import RandomUtils
+from . import RandomUtils
 
 
 class RaffleSystem:
@@ -76,7 +76,7 @@ class RaffleSystem:
             currentPools = commonPools
         prize = self.raffle(currentPools, self.raffleCount)
         # prize : {"name": "pool1:item1", "obj": {"rate": 2,  "enchanted": None, "icon": ""}}
-        if prize.keys()[0].split(":")[0] in importantPoolsName:
+        if list(prize.keys())[0].split(":")[0] in importantPoolsName:
             self.raffleCount = 0
         return prize
 
@@ -88,7 +88,7 @@ class RaffleSystem:
         """
         self.raffleCount = 0
         raffleItem = []
-        for iter in xrange(0, length):
+        for iter in range(0, length):
             raffleItem.append(self.raffleByRule())
         return raffleItem
 
@@ -144,4 +144,4 @@ def example():
     importance = 1  # 大奖池的最高rate，小于等于此rate的抽奖池为大奖池
     raffleExample = RaffleSystem(pools, min, max, importance)
     # 通过抽奖系统生成一个长度为10的奖品列表
-    print raffleExample.getRaffleItemList(10)
+    print(raffleExample.getRaffleItemList(10))

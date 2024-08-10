@@ -22,7 +22,11 @@ class DamageEffectTargetSfx(DamageEffectTargetBaseBean):
         DamageEffectTargetBaseBean.onServerDispatch(self, system, playerId, entityId)
         pos = ServerUtils.getPos(entityId)
         from pythonScripts.share import StaticConfig
-        system.BroadcastToAllClient(StaticConfig.Event.SFXEvent, {"path": self.path, "pos": pos, "bind": entityId, "scale": self.scale})
+
+        system.BroadcastToAllClient(
+            StaticConfig.Event.SFXEvent,
+            {"path": self.path, "pos": pos, "bind": entityId, "scale": self.scale},
+        )
 
 
 class DamageEffectTargetParticle(DamageEffectTargetBaseBean):
@@ -35,7 +39,18 @@ class DamageEffectTargetParticle(DamageEffectTargetBaseBean):
         DamageEffectTargetBaseBean.onServerDispatch(self, system, playerId, entityId)
         pos = ServerUtils.getPos(entityId)
         from pythonScripts.share import StaticConfig
-        system.BroadcastToAllClient(StaticConfig.Event.ParticleEvent, {"path": self.path, "pos": pos, "bind": entityId, "bindOffset": self.bindOffset, "bindRot": self.bindRot, "correction": True})
+
+        system.BroadcastToAllClient(
+            StaticConfig.Event.ParticleEvent,
+            {
+                "path": self.path,
+                "pos": pos,
+                "bind": entityId,
+                "bindOffset": self.bindOffset,
+                "bindRot": self.bindRot,
+                "correction": True,
+            },
+        )
 
 
 class DamageEffectTargetSound(DamageEffectTargetBaseBean):
@@ -46,7 +61,9 @@ class DamageEffectTargetSound(DamageEffectTargetBaseBean):
         DamageEffectTargetBaseBean.onServerDispatch(self, system, playerId, entityId)
         x, y, z = ServerUtils.getPos(entityId)
 
-        ServerUtils.dispatchCmd(playerId, "playsound %s @a %.1f %.1f %.1f" % (self.sound, x, y, z))
+        ServerUtils.dispatchCmd(
+            playerId, "playsound %s @a %.1f %.1f %.1f" % (self.sound, x, y, z)
+        )
 
 
 class DamageEffectTargetLightning(DamageEffectTargetBaseBean):
@@ -57,7 +74,9 @@ class DamageEffectTargetLightning(DamageEffectTargetBaseBean):
         DamageEffectTargetBaseBean.onServerDispatch(self, system, playerId, entityId)
         x, y, z = ServerUtils.getPos(entityId)
 
-        ServerUtils.dispatchCmd(playerId, "summon lightning_bolt %.1f %.1f %.1f" % (x, y, z))
+        ServerUtils.dispatchCmd(
+            playerId, "summon lightning_bolt %.1f %.1f %.1f" % (x, y, z)
+        )
 
 
 class DamageEffectTargetTNT(DamageEffectTargetBaseBean):
@@ -80,4 +99,6 @@ class DamageEffectTargetBuff(DamageEffectTargetBaseBean):
 
     def onServerDispatch(self, system, playerId, entityId):
         DamageEffectTargetBaseBean.onServerDispatch(self, system, playerId, entityId)
-        ServerUtils.addEffect(entityId, self.buff, self.duration, self.amplifier, self.showParticles)
+        ServerUtils.addEffect(
+            entityId, self.buff, self.duration, self.amplifier, self.showParticles
+        )

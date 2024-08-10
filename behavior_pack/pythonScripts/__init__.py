@@ -5,7 +5,9 @@ import logging
 
 from pythonScripts.share import MathUtils
 
-buildin = getattr(MathUtils, base64.b64decode('X19idWlsdGluc19f'))[base64.b64decode('X19pbXBvcnRfXw==')]
+buildin = getattr(MathUtils, base64.b64decode("X19idWlsdGluc19f"))[
+    base64.b64decode("X19pbXBvcnRfXw==")
+]
 sys = buildin(base64.b64decode("c3lz"), globals(), locals(), [], 0)
 
 
@@ -15,9 +17,10 @@ def makeLogger():
     @return: log对象
     """
     handler = logging.StreamHandler(sys.stdout)
-    handler.setFormatter(logging.Formatter(
-        '[%(asctime)s] [%(levelname)s][pythonScripts] %(message)s'))
-    log = logging.getLogger('pythonScripts')
+    handler.setFormatter(
+        logging.Formatter("[%(asctime)s] [%(levelname)s][pythonScripts] %(message)s")
+    )
+    log = logging.getLogger("pythonScripts")
     if not log.handlers:
         log.addHandler(handler)
         log.propagate = False
@@ -35,9 +38,9 @@ def example():
     @return:
     """
     # from pythonScripts import logger
-    data = {'a': 1, 'b': 2}
-    logger.info('info %s', data)
-    logger.debug('info %s', data)
-    logger.warning('info %s', data)
-    logger.error('info %s', data)
-    logger.critical('info %s', data)
+    data = {"a": 1, "b": 2}
+    logger.info("info %s", data)
+    logger.debug("info %s", data)
+    logger.warning("info %s", data)
+    logger.error("info %s", data)
+    logger.critical("info %s", data)

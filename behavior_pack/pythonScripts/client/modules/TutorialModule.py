@@ -135,7 +135,7 @@ class UiScreen(ModularScreen):
         self.touchHandler = {}
 
     def Create(self):
-        print "Create with page:", self.page, self.GetAllChildrenPath("/background/homepage/index")
+        print("Create with page:", self.page, self.GetAllChildrenPath("/background/homepage/index"))
         self.AddTouchEventHandler("/background/operation/left", self.LastPage, {"isSwallow": True})
         self.AddTouchEventHandler("/background/operation/right", self.NextPage, {"isSwallow": True})
         self.AddTouchEventHandler("/background/operation/close", self.Close, {"isSwallow": True})
@@ -146,7 +146,7 @@ class UiScreen(ModularScreen):
 
     def updateGrid(self):
         paths = self.GetChildrenName(self.__Grid.getContentPath())
-        print "paths", paths
+        print("paths", paths)
         if paths:
             for path in paths:
                 order = int(path.replace("button", "")) - 1
@@ -178,7 +178,7 @@ class UiScreen(ModularScreen):
             entry = Index[index]
             old = self.page
             self.page = entry.get("jump", self.page)
-            print "on click", data, old, self.page
+            print("on click", data, old, self.page)
             if old == self.page:
                 return
             else:

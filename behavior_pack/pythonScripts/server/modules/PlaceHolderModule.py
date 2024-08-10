@@ -29,7 +29,7 @@ class PlaceHolderModule(BaseServerModule):
         pass
 
     def time(self, player, *args):
-        print "time", args
+        print("time", args)
         from datetime import datetime
         if len(args) > 0 and args[0] == "0":
             date = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
@@ -54,4 +54,4 @@ class PlaceHolderModule(BaseServerModule):
     # 这是一个打印玩家聊天记录的例子
     # @Event.Vanilla(ServerEvent.ServerChatEvent)
     def ServerChatEvent(self, args):
-        print self.compile(args["playerId"], "[${time:0}]${name}说：" + args["message"])
+        print(self.compile(args["playerId"], "[${time:0}]${name}说：" + args["message"]))

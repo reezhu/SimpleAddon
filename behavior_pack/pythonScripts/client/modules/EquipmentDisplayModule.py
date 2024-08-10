@@ -66,7 +66,7 @@ class UiScreen(ModularScreen):
         """
         创建时绑定已生成的按钮，并进行一些初始化功能
         """
-        print "UiScreen created"
+        print("UiScreen created")
         self.AddTouchEventHandler("/background", self.move, {"isSwallow": True})
 
     def UpdateInit(self):

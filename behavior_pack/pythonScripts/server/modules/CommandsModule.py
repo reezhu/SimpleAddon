@@ -32,18 +32,18 @@ class CommandsModule(BaseServerModule):
                 self.__commands[param[0]](playerId, param[1:])
 
     def effect(self, playerId, params):
-        print "effect", playerId, params
+        print("effect", playerId, params)
         utils.addEffect(playerId, params[0], int(params[1]), int(params[2]))
 
     def cool(self, playerId, params):
-        print "cool", playerId, params
+        print("cool", playerId, params)
         self.NotifyToClient(playerId, StaticConfig.Event.EquipmentCooldownReduceEvent, {"key": params[0], "time": int(params[1])})
 
     def health(self, playerId, params):
-        print "cool", playerId, utils.getEntityAttr(playerId, serverApi.GetMinecraftEnum().AttrType.HEALTH), utils.getEntityMaxAttr(playerId, serverApi.GetMinecraftEnum().AttrType.HEALTH)
+        print("cool", playerId, utils.getEntityAttr(playerId, serverApi.GetMinecraftEnum().AttrType.HEALTH), utils.getEntityMaxAttr(playerId, serverApi.GetMinecraftEnum().AttrType.HEALTH))
 
     def explosion(self, playerId, params):
-        print "explosion", params
+        print("explosion", params)
         radius = int(params[0])
         scheduler = utils.getModule(StaticConfig.Module.Scheduler)
         scheduler.runFuncTaskLater(30, utils.createOptimizeExplosion, playerId, utils.getDimension(playerId), utils.getFootPos(playerId), radius, 1, 3, True)
@@ -51,7 +51,7 @@ class CommandsModule(BaseServerModule):
 
     def sync(self, playerId, params):
         module = utils.getModule(StaticConfig.Module.Sync)  # type:SyncApi
-        print "before test", module.getAll(playerId)
+        print("before test", module.getAll(playerId))
         from random import random
         module.set(playerId, "test", random())
-        print "after test", module.getAll(playerId)
+        print("after test", module.getAll(playerId))

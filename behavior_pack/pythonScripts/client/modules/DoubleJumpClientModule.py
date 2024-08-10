@@ -15,6 +15,6 @@ class DoubleJumpClientModule(BaseClientModule):
         self.power = 1  # 跳跃力度
 
     def UpdateDoubleJumpEvent(self, args):
-        print "UpdateDoubleJump", args
+        print("UpdateDoubleJump", args)
         self.maxJump = args.get("jump", 0)
         self.power = args.get("power", 1)

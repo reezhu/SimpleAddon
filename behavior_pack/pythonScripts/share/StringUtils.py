@@ -58,7 +58,7 @@ def replaceRecursive(d, origin, replacement):
     :param origin:
     :param replacement:
     """
-    for key, value in d.items():
+    for key, value in list(d.items()):
         if isinstance(value, dict):
             replaceRecursive(value, origin, replacement)
         elif isinstance(value, list):
@@ -70,7 +70,7 @@ def replaceRecursive(d, origin, replacement):
 
 
 if __name__ == '__main__':
-    print transformSize((100, 100), ("20%", "50%"))
-    print transformSize((100, 100), (0.2, 0.5))
-    print transformSize((100, 100), (20, 50))
-    print transformSize((100, 100), ("20%+16", "50%-2"))
+    print(transformSize((100, 100), ("20%", "50%")))
+    print(transformSize((100, 100), (0.2, 0.5)))
+    print(transformSize((100, 100), (20, 50)))
+    print(transformSize((100, 100), ("20%+16", "50%-2")))

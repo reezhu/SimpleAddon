@@ -23,20 +23,20 @@ def linkShaderFolder(file, targetParent):
         vol = chr(i) + ':\MCStudioDownload\game\MinecraftPE_Netease'
         if os.path.isdir(vol):
             files = os.listdir(vol)
-            files = filter(lambda f: os.path.isdir(os.path.join(vol, f)), files)
+            files = [f for f in files if os.path.isdir(os.path.join(vol, f))]
             if len(files) > 0:
                 files.sort(reverse=True)
                 versionFolder = files[0]
                 glslPath = os.path.join(vol, versionFolder, "data\shaders\glsl")
                 if os.path.isdir(glslPath):
-                    print "found game file in ", glslPath
+                    print("found game file in ", glslPath)
                     dispatchCmd('mklink /J "%s" "%s"' % (targetPath, glslPath))
                     dispatchCmd(["@echo off", chr(i) + ":", "cd " + targetParent, "svn propset svn:ignore shaders ./"])
                     dispatchCmd(["@echo off", chr(i) + ":", "cd " + targetParent, "svn propset svn:ignore .clang-format ./"])
                     dispatchCmd(["@echo off", chr(i) + ":", "cd " + os.path.join(targetParent), "svn propset svn:ignore .glsl ./"])
 
                     return
-    print "[ERROR]no game file found!!!!!!"
+    print("[ERROR]no game file found!!!!!!")
 
 
 def process(file, sourceParent, targetParent):
@@ -71,17 +71,17 @@ def dispatchCmd(cmds):
         message, error = res.communicate("\n".join(cmds) + "\n")
         code = res.returncode
     if code:
-        print "[ERROR]", cmds, error.decode("gbk")  # ,message.decode("gbk")
+        print("[ERROR]", cmds, error.decode("gbk"))  # ,message.decode("gbk")
     else:
-        print message.decode("gbk"),  # 由于系统编码问题，进行一次解码
+        print(message.decode("gbk"), end=' ')  # 由于系统编码问题，进行一次解码
 
 
 if __name__ == "__main__":
-    sourcePath = raw_input('请输入源项目的脚本路径，如D:\ProjectsPython\sample\\behavior_pack\pythonScripts\n')
+    sourcePath = input('请输入源项目的脚本路径，如D:\ProjectsPython\sample\\behavior_pack\pythonScripts\n')
     if len(sourcePath) == 0:
         sourcePath = "D:\OneDrive\ProjectsPython\sample\\behavior_pack\pythonScripts"
     while not os.path.exists(sourcePath) or not os.path.isdir(sourcePath):
-        sourcePath = raw_input("项目路径不存在！请重新输入！")
+        sourcePath = input("项目路径不存在！请重新输入！")
     sourcePath = os.path.abspath(sourcePath)
     pwd = SCRIPT_ROOT
     for folder in os.listdir(sourcePath):

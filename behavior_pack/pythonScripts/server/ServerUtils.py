@@ -135,7 +135,7 @@ def dispatchCmd(player, command):
 
 
 def playSound(dimensionId, pos, sound):
-    print "cmd", "playsound %s %.1f %.1f %.1f" % (sound, pos[0], pos[1], pos[2])
+    print("cmd", "playsound %s %.1f %.1f %.1f" % (sound, pos[0], pos[1], pos[2]))
     dispatchCmd(getPlayerByDimension(dimensionId), "playsound %s @a %.1f %.1f %.1f" % (sound, pos[0], pos[1], pos[2]))
 
 
@@ -777,7 +777,7 @@ def isSameItem(item1, item2, ignoreCount=False, ignoreAux=False, ignoreRest=Fals
                     return True
                 else:
                     keys = set(dict(item1).keys())
-                    keys.union(item2.keys())
+                    keys.union(list(item2.keys()))
                     keys.remove("count")
                     keys.remove("auxValue")
                     keys.remove("itemName")
@@ -1557,7 +1557,7 @@ def clearExtraDataByRegex(entityId=None, regex=".*"):
     dataDict = comp.GetWholeExtraData()
     count = 0
     if dataDict:
-        for key in dataDict.keys():
+        for key in list(dataDict.keys()):
             if re.match(regex, key):
                 comp.CleanExtraData(key)
                 count += 1

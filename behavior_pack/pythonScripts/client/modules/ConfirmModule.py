@@ -22,7 +22,13 @@ class ConfirmModule(BaseClientModule):
         icon = args.get("icon", None)
         callback = args.get("callback", None)  # 当callback有event时，会向服务器发回请求
         if callback:
-            self.pop(text, icon, callback=lambda res: self.NotifyToServer(callback, {"playerId": clientApi.GetLocalPlayerId(), "result": res}))
+            self.pop(
+                text,
+                icon,
+                callback=lambda res: self.NotifyToServer(
+                    callback, {"playerId": clientApi.GetLocalPlayerId(), "result": res}
+                ),
+            )
         else:
             self.pop(text, icon)
 

@@ -107,7 +107,6 @@ Fuels = {
     "minecraft:wool": 100,
     "minecraft:carpet": 67,
     "minecraft:bamboo": 50,
-
 }
 
 

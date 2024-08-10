@@ -24,7 +24,8 @@ class RandomGenerator:
         return None
 
     def getRandom(self):
-        if self.total == 0: return None
+        if self.total == 0:
+            return None
         v = random.random() * self.total
         for entry in self.lib:
             v -= entry["r"]

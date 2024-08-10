@@ -21,17 +21,17 @@ ADJUST_ATTR = 5
 
 spells = {
     # 主魔咒的参数除了注释全部是从抛射物配置导出
-    'default:main': {
+    "default:main": {
         # 释放的抛射物identifier
-        'uid': 'common:empty_projectile',
+        "uid": "common:empty_projectile",
         # 重力
-        'gravity': 0.01,
+        "gravity": 0.01,
         # 射速
-        'power': 1.5,
+        "power": 1.5,
         # 伤害
-        'damage': 4.0,
+        "damage": 4.0,
         # 名字，无意义，下同
-        'name': '魔法弹',
+        "name": "魔法弹",
         # 生存时间
         "alive": 10,
         # 碰撞时会发出的事件，用于触发其他逻辑,可以接受列表
@@ -39,52 +39,58 @@ spells = {
         # 射中时的音效,可以接受列表
         "sound_hit": ["bow.hit"],
         # 射中时的帧粒子,可以接受列表
-        "particle_hit": ["effects/lianyou2.json",
-                         {
-                             "path": "effects/lianyou2.json",
-                             # "pos": (0, 5, 0),这个字段会在运行时填入，不用填
-                             "layer": 1,
-                             "correction": False
-
-                         }],
+        "particle_hit": [
+            "effects/lianyou2.json",
+            {
+                "path": "effects/lianyou2.json",
+                # "pos": (0, 5, 0),这个字段会在运行时填入，不用填
+                "layer": 1,
+                "correction": False,
+            },
+        ],
         # 飞行时的绑定粒子,可以接受列表
-        "particle_bind": ["effects/lianyou1.json",
-                          {
-                              "path": "effects/lianyou1.json",
-                              # "bind": None,这个字段会在运行时填入，不用填
-                              "bindOffset": (0, 5, 0),
-                              "bindRot": (0, 0, 0),
-                              "layer": 1,
-                              "correction": True
-                          }],
+        "particle_bind": [
+            "effects/lianyou1.json",
+            {
+                "path": "effects/lianyou1.json",
+                # "bind": None,这个字段会在运行时填入，不用填
+                "bindOffset": (0, 5, 0),
+                "bindRot": (0, 0, 0),
+                "layer": 1,
+                "correction": True,
+            },
+        ],
         # 射中时的帧动画（拉伸）,可以接受列表
         "frame_hit_drag": ["frame/wizard_projectile_magic_bullet"],
         # 射中时的帧动画的起始位置偏移量，（负左正右，负下正上）
         "frame_hit_drag_offset": (1, 1),
         # 射中时的帧动画,可以接受列表,带json会判定成编辑器序列帧
-        "frame_hit": ["frame/wizard_projectile_magic_bullet",
-                      {
-                          "path": "frame/wizard_projectile_magic_bullet",
-                          # "pos": (0, 5, 0),这个字段会在运行时填入，不用填
-                          "rot": (0, 0, 0),
-                          "scale": (1, 1, 1),
-                          "faceCamera": True,
-                          "layer": 1,
-                          "loop": False
-
-                      }],
+        "frame_hit": [
+            "frame/wizard_projectile_magic_bullet",
+            {
+                "path": "frame/wizard_projectile_magic_bullet",
+                # "pos": (0, 5, 0),这个字段会在运行时填入，不用填
+                "rot": (0, 0, 0),
+                "scale": (1, 1, 1),
+                "faceCamera": True,
+                "layer": 1,
+                "loop": False,
+            },
+        ],
         # 飞行时绑定动画,可以接受列表
-        "frame_bind": ["frame/wizard_projectile_magic_bullet",
-                       {
-                           "path": "frame/wizard_projectile_magic_bullet",
-                           # "bind": None,这个字段会在运行时填入，不用填
-                           "bindOffset": (0, 5, 0),
-                           "bindRot": (0, 0, 0),
-                           "scale": (1, 1, 1),
-                           "faceCamera": True,
-                           "layer": 1,
-                           "loop": False
-                       }],
+        "frame_bind": [
+            "frame/wizard_projectile_magic_bullet",
+            {
+                "path": "frame/wizard_projectile_magic_bullet",
+                # "bind": None,这个字段会在运行时填入，不用填
+                "bindOffset": (0, 5, 0),
+                "bindRot": (0, 0, 0),
+                "scale": (1, 1, 1),
+                "faceCamera": True,
+                "layer": 1,
+                "loop": False,
+            },
+        ],
         # # 飞行时曳光动画,可以接受列表
         "frame_tail": ["frame/wizard_projectile_magic_bullet"],
         # 飞行时曳光动画显示间隔
@@ -477,7 +483,6 @@ spells = {
         "available": 2,
         "costMultiple": 2.6,
     },
-
     "default:operator_trigger": {
         "name": "塑形:触发",
         # 击中后释放下一个主魔咒
@@ -490,8 +495,13 @@ spells = {
         # 对子弹施加一个侧向的力
         "subtype": "motion",
         # 施加的力的公式，这个公式是蛇形机动
-        "motion": lambda motionOffset, motion, vertical, origin, time: VectorUtils.multiple(vertical, math.cos(
-            time * 15.0) * VectorUtils.length(motion) * 3 * math.log10(time / 3 + 1)),
+        "motion": lambda motionOffset, motion, vertical, origin, time: VectorUtils.multiple(
+            vertical,
+            math.cos(time * 15.0)
+            * VectorUtils.length(motion)
+            * 3
+            * math.log10(time / 3 + 1),
+        ),
         "costMultiple": 1.1,
     },
     "default:operator_random": {
@@ -500,9 +510,14 @@ spells = {
         "subtype": "motion",
         # 施加的力的公式，这个公式是转圈
         "motion": lambda motionOffset, motion, vertical, origin, time: VectorUtils.multiple(
-            VectorUtils.add(VectorUtils.multiple(vertical, random.random() - 0.5),
-                            VectorUtils.multiple(VectorUtils.cross(motion, vertical), random.random() - 0.5)),
-            VectorUtils.length(motion) * 2 * math.log10(time + 1)),
+            VectorUtils.add(
+                VectorUtils.multiple(vertical, random.random() - 0.5),
+                VectorUtils.multiple(
+                    VectorUtils.cross(motion, vertical), random.random() - 0.5
+                ),
+            ),
+            VectorUtils.length(motion) * 2 * math.log10(time + 1),
+        ),
         "costMultiple": 1.05,
     },
     "default:operator_spiral_motion_right": {
@@ -510,10 +525,9 @@ spells = {
         "type": SUB,
         "subtype": "motion",
         # 施加的力的公式，这个公式是转圈
-        "motion": lambda motionOffset, motion, vertical, origin, time: VectorUtils.multiple(vertical,
-                                                                                            VectorUtils.length(
-                                                                                                motion) * 1 * math.log10(
-                                                                                                time / 3 + 1)),
+        "motion": lambda motionOffset, motion, vertical, origin, time: VectorUtils.multiple(
+            vertical, VectorUtils.length(motion) * 1 * math.log10(time / 3 + 1)
+        ),
         "costMultiple": 1.05,
     },
     "default:operator_spiral_motion_left": {
@@ -521,10 +535,9 @@ spells = {
         "type": SUB,
         "subtype": "motion",
         # 施加的力的公式，这个公式是转圈
-        "motion": lambda motionOffset, motion, vertical, origin, time: VectorUtils.multiple(vertical,
-                                                                                            VectorUtils.length(
-                                                                                                motion) * -1 * math.log10(
-                                                                                                time / 3 + 1)),
+        "motion": lambda motionOffset, motion, vertical, origin, time: VectorUtils.multiple(
+            vertical, VectorUtils.length(motion) * -1 * math.log10(time / 3 + 1)
+        ),
         "costMultiple": 1.05,
     },
     "default:operator_homing": {
@@ -555,28 +568,28 @@ spells = {
         # 前摇时间
         "subtype": "chargeTime",
         # 数值
-        "value": -0.2
+        "value": -0.2,
     },
     "default:operator_hold_mana": {
         "name": "塑形:魔力掌握",
         "type": ADJUST_ATTR,
         # 最大魔法值
         "subtype": "maxMana",
-        "value": 100
+        "value": 100,
     },
     "default:operator_mana_recovery": {
         "name": "塑形:魔力亲和",
         "type": ADJUST_ATTR,
         # 魔法恢复速度
         "subtype": "manaRecoverySpeed",
-        "value": 10
+        "value": 10,
     },
     "default:operator_rapid_reload": {
         "name": "塑形:快速装填",
         "type": ADJUST_ATTR,
         # 魔法恢复速度
         "subtype": "cdTime",
-        "value": -0.2
+        "value": -0.2,
     },
     "default:operator_demonic_power": {
         "name": "塑形:恶魔之力",
@@ -618,27 +631,27 @@ spells = {
         "force": 1.0,
         # 检测范围
         "radius": 16,
-        "costMultiple": 1.2
+        "costMultiple": 1.2,
     },
     "default:operator_saikyo_magician": {
         "name": "塑形:最强巫术",
         "type": ADJUST_ATTR,
         # 最大魔法值
         "subtype": "maxMana",
-        "value": 9999
+        "value": 9999,
     },
     "default:operator_magic_confinement": {
         "name": "塑形:魔法集束",
         "type": SUB,
         "subtype": "converge",
-        "converge": 120
+        "converge": 120,
     },
     "default:operator_ender_teleport": {
         "name": "瞬式:末影",
         "type": SUB,
         # 传送
         "subtype": "teleport",
-        "costMultiple": 1.05
+        "costMultiple": 1.05,
     },
     "default:operator_attract": {
         "name": "塑形:吸引",
@@ -646,21 +659,21 @@ spells = {
         # 吸引
         "subtype": "attract",
         "motion": lambda distance, x, y, z: (3 * x, 3 * y, 3 * z),
-        "costMultiple": 1.1
+        "costMultiple": 1.1,
     },
     "default:operator_cure": {
         "name": "塑形:治愈",
         "type": SUB,
         # 回春
         "subtype": "cure",
-        "costMultiple": 0.5
+        "costMultiple": 0.5,
     },
     "default:operator_calm": {
         "name": "塑形:冷静",
         "type": SUB,
         # 冷静
         "subtype": "calm",
-        "costMultiple": 1.2
+        "costMultiple": 1.2,
     },
     "default:operator_life_leech": {
         "name": "塑形:生命汲取",
@@ -668,7 +681,7 @@ spells = {
         # 回报
         "subtype": "repay",
         "repay": 0.5,
-        "costMultiple": 1.05
+        "costMultiple": 1.05,
     },
     "default:operator_excavation": {
         "name": "塑形:挖掘",
@@ -676,7 +689,7 @@ spells = {
         # 挖掘
         "subtype": "dig",
         "fortune": 0,
-        "costMultiple": 1.1
+        "costMultiple": 1.1,
     },
     "default:operator_excavation_fortune": {
         "name": "塑形:挖掘（时运）",
@@ -684,7 +697,7 @@ spells = {
         # 挖掘
         "subtype": "dig",
         "fortune": 3,
-        "costMultiple": 1.15
+        "costMultiple": 1.15,
     },
     "default:operator_smelting": {
         "name": "塑形:煅烧",
@@ -692,7 +705,7 @@ spells = {
         # 灼烧
         "subtype": "smelting",
         "fire": 3,
-        "costMultiple": 1.1
+        "costMultiple": 1.1,
     },
     "default:operator_wide_replacer_one": {
         "name": "塑形:替换(蔓延同类)",
@@ -703,7 +716,7 @@ spells = {
         "radius": 2,
         "fortune": 0,
         "cost": 2,
-        "costMultiple": 1.5
+        "costMultiple": 1.5,
     },
     "default:operator_wide_replacer_one_big": {
         "name": "塑形:大范围替换(蔓延同类)",
@@ -714,7 +727,7 @@ spells = {
         "radius": 5,
         "fortune": 0,
         "cost": 5,
-        "costMultiple": 2.0
+        "costMultiple": 2.0,
     },
     "default:operator_wide_replacer_one_fortune": {
         "name": "塑形:时运替换(蔓延同类)",
@@ -725,7 +738,7 @@ spells = {
         "radius": 2,
         "fortune": 3,
         "cost": 2,
-        "costMultiple": 2.0
+        "costMultiple": 2.0,
     },
     "default:operator_wide_replacer_one_big_fortune": {
         "name": "塑形:大范围时运替换(蔓延同类)",
@@ -736,7 +749,7 @@ spells = {
         "radius": 5,
         "fortune": 3,
         "cost": 5,
-        "costMultiple": 2.5
+        "costMultiple": 2.5,
     },
     "default:operator_wide_replacer_all": {
         "name": "塑形:替换(贪婪蔓延)",
@@ -747,7 +760,7 @@ spells = {
         "radius": 2,
         "fortune": 0,
         "cost": 2,
-        "costMultiple": 1.8
+        "costMultiple": 1.8,
     },
     "default:operator_wide_replacer_all_big": {
         "name": "塑形:大范围替换(贪婪蔓延)",
@@ -758,7 +771,7 @@ spells = {
         "radius": 5,
         "fortune": 0,
         "cost": 5,
-        "costMultiple": 2.5
+        "costMultiple": 2.5,
     },
     "default:operator_wide_replacer_all_fortune": {
         "name": "塑形:时运替换(贪婪蔓延)",
@@ -769,7 +782,7 @@ spells = {
         "radius": 2,
         "fortune": 3,
         "cost": 2,
-        "costMultiple": 2.5
+        "costMultiple": 2.5,
     },
     "default:operator_wide_replacer_all_big_fortune": {
         "name": "塑形:大范围时运替换(贪婪蔓延)",
@@ -780,7 +793,7 @@ spells = {
         "radius": 5,
         "fortune": 3,
         "cost": 5,
-        "costMultiple": 3.0
+        "costMultiple": 3.0,
     },
     "default:operator_replacer": {
         "name": "塑形:替换",
@@ -788,7 +801,7 @@ spells = {
         # 替换
         "subtype": "replaceBlock",
         "fortune": 0,
-        "costMultiple": 1.1
+        "costMultiple": 1.1,
     },
     "default:operator_replacer_fortune": {
         "name": "塑形:时运替换",
@@ -796,7 +809,7 @@ spells = {
         # 替换
         "subtype": "replaceBlock",
         "fortune": 3,
-        "costMultiple": 1.15
+        "costMultiple": 1.15,
     },
     "default:operator_gravitational": {
         "name": "塑形:万有引力",
@@ -807,7 +820,7 @@ spells = {
         "radius": 3,
         # 吸力，越大越快 (可能會直接撞上拋射物導致效果中斷)
         "power": 1,
-        "costMultiple": 1.1
+        "costMultiple": 1.1,
     },
     "default:operator_continued_damage": {
         "name": "塑形:持续伤害",
@@ -820,8 +833,8 @@ spells = {
         "damage": 2,
         # 攻擊頻率，如下: 每 15 tick 攻擊一次
         "frequencyTick": 15,
-        "costMultiple": 1.1
-    }
+        "costMultiple": 1.1,
+    },
 }
 # 禁止被替换的方块
 REPLACE_BLOCK_FORBIDDEN_LIST = {
@@ -845,5 +858,5 @@ REPLACE_BLOCK_FORBIDDEN_LIST = {
     "minecraft:campfire",
     "minecraft:soul_campfire",
     "minecraft:jukebox",
-    "minecraft:tallgrass"
+    "minecraft:tallgrass",
 }

@@ -38,7 +38,7 @@ class MyClientSystem(ClientSystem):
             module._vanillaEvents = vanillaEvents
             module._clientEvents = clientEvents
             module._serverEvents = serveraEvents
-            print "registered client module:", name, ",version:", version, ",module:", module
+            print("registered client module:", name, ",version:", version, ",module:", module)
 
     def getModule(self, name):
         if type(name) != str:
@@ -50,17 +50,17 @@ class MyClientSystem(ClientSystem):
             return module[0]
 
     def Destroy(self):
-        for module in self.__modules.values():
+        for module in list(self.__modules.values()):
             module[0].onDestroy()
         self.UnListenAllEvents()
 
     def OnUIInitFinished(self, args):
         # print "OnUIInitFinished ", args
-        for k, v in self.__modules.items():
+        for k, v in list(self.__modules.items()):
             try:
                 v[0].onUiInited()
             except Exception as e:
-                print "[ERROR] on init ui! client module:", k, ",version:", v[1], ",module:", v[0]
+                print("[ERROR] on init ui! client module:", k, ",version:", v[1], ",module:", v[0])
 
     def LoadClientAddonScriptsAfter(self, args):
         # print "LoadClientAddonScriptsAfter", args
@@ -69,20 +69,20 @@ class MyClientSystem(ClientSystem):
         def st(param1, param2):
             return param1[0] - param2[0]
 
-        for k, v in self.__data.items():
+        for k, v in list(self.__data.items()):
             finalData = {}
             for version, data in sorted(v, cmp=st):
                 finalData.update(data)
             sortedData[k] = finalData
         self.__loading = False
         self.__data = sortedData
-        for k, v in self.__modules.items():
+        for k, v in list(self.__modules.items()):
             try:
                 v[0]._onRegister(self)
-                print "enabled client module:", k, ",version:", v[1], ",module:", v[0]
+                print("enabled client module:", k, ",version:", v[1], ",module:", v[0])
             except Exception as e:
-                print "[ERROR] register client module:", k, ",version:", v[1], ",module:", v[0]
-                print "error:", e
+                print("[ERROR] register client module:", k, ",version:", v[1], ",module:", v[0])
+                print("error:", e)
 
     def addData(self, name, data, version=0):
         if not self.__loading:

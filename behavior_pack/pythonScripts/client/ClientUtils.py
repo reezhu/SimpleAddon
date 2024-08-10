@@ -561,7 +561,7 @@ def setFbxModel(entity, model):
     """
     modelComp = clientApi.CreateComponent(entity, 'Minecraft', 'model')
     # 'xuenv'即为netease_models.json里配置的骨骼模型名称
-    print "set model", entity, model
+    print("set model", entity, model)
     return modelComp.SetModel(model)
 
 

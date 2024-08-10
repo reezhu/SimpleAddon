@@ -22,8 +22,9 @@ class BlockEntity(object):
 
     def __init__(self, blockEntityData):
         # log = "saved "
-        for k, v in self.__dict__.items():
-            if k.startswith("_"): continue
+        for k, v in list(self.__dict__.items()):
+            if k.startswith("_"):
+                continue
 
             data = blockEntityData[k]
             # log += "%s:%s," % (k, data)
@@ -43,7 +44,8 @@ class BlockEntity(object):
         object.__setattr__(self, "_blockEntityData", blockEntityData)
 
     def __setattr__(self, key, value):
-        if key.startswith("_"): return object.__setattr__(self, key, value)
+        if key.startswith("_"):
+            return object.__setattr__(self, key, value)
         object.__setattr__(self, key, value)
         # print "set attr", key, value, self._blockEntityData is not None
         if self._blockEntityData is not None:
@@ -58,7 +60,8 @@ class BlockEntity(object):
             self._blockEntityData[key] = value
 
     def __getattribute__(self, item):
-        if item.startswith("_"): return object.__getattribute__(self, item)
+        if item.startswith("_"):
+            return object.__getattribute__(self, item)
         if self._params.get(item) == "num":
             value = object.__getattribute__(self, item)
             return value if value is not None else 0
@@ -74,7 +77,7 @@ class BlockEntity(object):
         :param newBlock:
         """
         # print "switch", self.__dict__
-        for k, v in self._params.items():
+        for k, v in list(self._params.items()):
             newBlock[k] = getattr(self, k)
         self._blockEntityData = newBlock
 
@@ -84,6 +87,6 @@ class BlockEntity(object):
         :return:
         """
         result = {}
-        for k, v in self._params.items():
+        for k, v in list(self._params.items()):
             result[k] = getattr(self, k)
         return result

@@ -20,25 +20,33 @@ class ItemDispatchModule(BaseServerModule):
     def example(self, system):
         # 配置举例
         # 开局会给与玩家的物品
-        system.addData(StaticConfig.Data.ITEM_DISPATCH, {
-            config.ModName + "guide": {
-                "itemName": "fossils_archeology:guide",
-                "auxValue": 0,
-                "count": 1,
-            }
-        })
-        # 物品放下会变成实体
-        system.addData(StaticConfig.Data.ITEM_PLACE_ENTITY, {
-            "minecraft:ghast_tear": {
-                "entity": "minecraft:ghast",
-            }
-        })
-        # 物品获取后会替换成lore
-        system.addData(StaticConfig.Data.ITEM_Lore_Replace, {
-            "minecraft:stone": {
-                "lore": "%name%\n被玩家${player}拾起于${time}"
+        system.addData(
+            StaticConfig.Data.ITEM_DISPATCH,
+            {
+                config.ModName
+                + "guide": {
+                    "itemName": "fossils_archeology:guide",
+                    "auxValue": 0,
+                    "count": 1,
+                }
             },
-            "minecraft:book": {
-                "lore": "%name%%category%%enchanting%%attack_damage%"
-            }
-        })
+        )
+        # 物品放下会变成实体
+        system.addData(
+            StaticConfig.Data.ITEM_PLACE_ENTITY,
+            {
+                "minecraft:ghast_tear": {
+                    "entity": "minecraft:ghast",
+                }
+            },
+        )
+        # 物品获取后会替换成lore
+        system.addData(
+            StaticConfig.Data.ITEM_Lore_Replace,
+            {
+                "minecraft:stone": {"lore": "%name%\n被玩家${player}拾起于${time}"},
+                "minecraft:book": {
+                    "lore": "%name%%category%%enchanting%%attack_damage%"
+                },
+            },
+        )

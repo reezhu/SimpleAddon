@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 import collections
 
-import thread
+import _thread
 import time
 
 """调度器"""
@@ -62,17 +62,17 @@ class Scheduler(object):
             self.__balanceTasks.popleft()
 
     def __tickNormalTasks(self):
-        for key, dicts in self.__tasks.items():
+        for key, dicts in list(self.__tasks.items()):
             if dicts["func"].isCanceled() is True:
                 del self.__tasks[key]
             elif dicts["later"] <= self.__ticks:
                 try:
                     if dicts.get("asyc", False) is True:
-                        thread.start_new_thread(dicts["func"].run, ())
+                        _thread.start_new_thread(dicts["func"].run, ())
                     else:
                         dicts["func"].run()
                 except Exception as e:
-                    print "Error running task", dicts["func"].__dict__, e
+                    print("Error running task", dicts["func"].__dict__, e)
                 if "interval" in dicts and dicts["func"].isCanceled() is False:
                     dicts["later"] = self.__ticks + dicts["interval"]
                 elif key in self.__tasks:

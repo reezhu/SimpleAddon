@@ -45,7 +45,10 @@ def registerServerModules(system):
     # 如果是一般mod自己新建的模块，只需要与自己同系列保持兼容，那么只需要像这样注册，注意name需要唯一，所以最好加上mod前缀
     if debug:
         from pythonScripts.server.modules.CommandsModule import CommandsModule
-        system.registerModule(CommandsModule(), name=ModName + "EXAMPLE_COMMAND_MODULE", version=0)
+
+        system.registerModule(
+            CommandsModule(), name=ModName + "EXAMPLE_COMMAND_MODULE", version=0
+        )
 
 
 def registerClientModules(system):
@@ -58,7 +61,10 @@ def registerClientModules(system):
     # 如果是一般mod自己新建的模块，只需要与自己同系列保持兼容，那么只需要像这样注册，注意name需要唯一，所以最好加上mod前缀+
     if debug:
         from pythonScripts.client.modules.KeyPressModule import KeyPressModule
-        system.registerModule(KeyPressModule(), name=ModName + "EXAMPLE_KEY_MODULE", version=0)
+
+        system.registerModule(
+            KeyPressModule(), name=ModName + "EXAMPLE_KEY_MODULE", version=0
+        )
 
 
 def registerData(system):
@@ -66,6 +72,4 @@ def registerData(system):
     在这里加入数据
     :param system:
     """
-    system.addData("EXAMPLE", {
-
-    }, version=0)
+    system.addData("EXAMPLE", {}, version=0)

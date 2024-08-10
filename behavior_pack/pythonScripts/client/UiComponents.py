@@ -44,14 +44,16 @@ class ModularScreen(ScreenNode):
         # print "update position", data
         if data is not None:
             import json
+
             obj = json.loads(data)
-            for k, v in obj.items():
+            for k, v in list(obj.items()):
                 v = tuple(v)
                 self._positions[k] = v
                 self.SetPosition(k, (v[0] * self.sx, v[1] * self.sy))
 
     def OnUploadPosition(self):
         import json
+
         s = json.dumps(self._positions)
         # print "upload position", s
         return s
@@ -77,9 +79,15 @@ class ModularScreen(ScreenNode):
                 x, y = self.GetPosition(self.__pressed)
                 sx, sy = self.GetSize(self.__pressed)
                 # print "self", self.sx, sx, self.sx - sx
-                position = (max(0, min(x + posX - lastX, self.sx - sx)), (max(0, min(y + posY - lastY, self.sy - sy))))
+                position = (
+                    max(0, min(x + posX - lastX, self.sx - sx)),
+                    (max(0, min(y + posY - lastY, self.sy - sy))),
+                )
                 self.SetPosition(self.__pressed, position)
-                self._positions[self.__pressed] = float(position[0]) / self.sx, float(position[1]) / self.sy
+                self._positions[self.__pressed] = (
+                    float(position[0]) / self.sx,
+                    float(position[1]) / self.sy,
+                )
 
             self.__lastPos = (posX, posY)
 
@@ -93,7 +101,9 @@ class ModularScreen(ScreenNode):
                 self.OnUploadPosition()
                 return tickMove < 30
             return True
-        elif args.get("TouchEvent") == clientApi.GetMinecraftEnum().TouchEvent.TouchDown:
+        elif (
+            args.get("TouchEvent") == clientApi.GetMinecraftEnum().TouchEvent.TouchDown
+        ):
             if self._movable:
                 self.__pressed = args["ButtonPath"]
                 self.__lastPos = clientApi.GetTouchPos()
@@ -136,9 +146,12 @@ class ModularComponent:
     def _registerComponent(self, comp):
         for key in dir(comp):
             func = getattr(comp, key)
-            if hasattr(func, 'collection_name') or hasattr(func, 'binding_flags'):
+            if hasattr(func, "collection_name") or hasattr(func, "binding_flags"):
                 if hasattr(self, key):
-                    raise Exception("%s in %s has been defined as %s" % (key, comp, getattr(self, key)))
+                    raise Exception(
+                        "%s in %s has been defined as %s"
+                        % (key, comp, getattr(self, key))
+                    )
                 else:
                     setattr(self, key, func)
 
@@ -167,13 +180,15 @@ class ModularComponent:
         return self._screenNode.GetPosition(self._path)
 
     def getPositionFrom(self, path):
-        if not self._path.startswith(path): return None
+        if not self._path.startswith(path):
+            return None
         position = (0, 0)
         p = self._path
         from pythonScripts.share import VectorUtils
+
         while len(p) > 0 and p != path:
             position = VectorUtils.add(position, self._screenNode.GetPosition(p))
-            p = p[:p.rfind("/")]
+            p = p[: p.rfind("/")]
         return position
 
     def setSize(self, size):
@@ -199,7 +214,9 @@ class ModularComponent:
         self._screenNode.GetBaseUIControl(self._path).SetLayer(layer)
 
     def setRemove(self):
-        self._screenNode.RemoveComponent(self._path, self._path[:self._path.rindex("/")])
+        self._screenNode.RemoveComponent(
+            self._path, self._path[: self._path.rindex("/")]
+        )
 
 
 class Label(ModularComponent):
@@ -211,7 +228,8 @@ class Label(ModularComponent):
         self.__color = (1, 1, 1, 1)
 
     def setTextColor(self, color):
-        if color == self.__color: return
+        if color == self.__color:
+            return
         self.__color = color
         self.__screenNode.SetTextColor(self.__path, color)
 
@@ -273,13 +291,16 @@ class ClipImage(Image):
         """
         if self.__size is None:
             self.__size = self.getSize()
-        if self.__size is None: return
+        if self.__size is None:
+            return
         sx, sy = self.__size
         size = x * sx, y * sy
         self.setSize(size)
         if clipUV:
             uvSize = x * self.__u, y * self.__v
-            start = 0 if fromLeft else (self.__u - uvSize[0]), 0 if fromTop else (self.__v - uvSize[1])
+            start = 0 if fromLeft else (self.__u - uvSize[0]), (
+                0 if fromTop else (self.__v - uvSize[1])
+            )
             self.setUV(uvSize, start)
             # print "clip", start, uvSize, size
 
@@ -293,12 +314,21 @@ class ItemStackButton(ModularComponent):
         self.__pressed = False
 
     def setItem(self, itemDict):
-        if self.__item == itemDict: return
+        if self.__item == itemDict:
+            return
         self.__item = itemDict
         if itemDict is not None:
-            self.__screenNode.SetUiItem(self.__path + "/item_render", itemDict["itemName"], itemDict["auxValue"], isEnchanted=len(itemDict.get("enchantData", [])) > 0)
+            self.__screenNode.SetUiItem(
+                self.__path + "/item_render",
+                itemDict["itemName"],
+                itemDict["auxValue"],
+                isEnchanted=len(itemDict.get("enchantData", [])) > 0,
+            )
             self._screenNode.SetVisible(self._path + "/item_render", True)
-            self.__screenNode.SetText(self.__path + "/item_amount", str(itemDict["count"] if itemDict["count"] > 1 else ""))
+            self.__screenNode.SetText(
+                self.__path + "/item_amount",
+                str(itemDict["count"] if itemDict["count"] > 1 else ""),
+            )
             durability = itemDict.get("durability", 0)
             maxDurability = utils.getItemBasicInfo(itemDict).get("maxDurability", 0)
             if durability > 0 and durability != maxDurability:
@@ -306,9 +336,18 @@ class ItemStackButton(ModularComponent):
                 self._screenNode.SetVisible(self._path + "/durability", True)
                 x, y = self.__screenNode.GetSize(self._path + "/durability")
                 percent = float(durability) / maxDurability
-                self.__screenNode.SetSize(self._path + "/durability", (x, 3), resizeChildren=True)
-                self.__screenNode.SetSize(self._path + "/durability/filled_progress_bar", (x * percent, 3), resizeChildren=False)
-                self._screenNode.SetSpriteColor(self.__path + "/durability/filled_progress_bar", (1 - percent, percent, 0))
+                self.__screenNode.SetSize(
+                    self._path + "/durability", (x, 3), resizeChildren=True
+                )
+                self.__screenNode.SetSize(
+                    self._path + "/durability/filled_progress_bar",
+                    (x * percent, 3),
+                    resizeChildren=False,
+                )
+                self._screenNode.SetSpriteColor(
+                    self.__path + "/durability/filled_progress_bar",
+                    (1 - percent, percent, 0),
+                )
             else:
                 self._screenNode.SetVisible(self._path + "/durability", False)
 
@@ -341,7 +380,9 @@ class ItemStackButton(ModularComponent):
 
     def addTouchHandler(self, callback, param={"isSwallow": True}):
         # print "add handler", self.__path + "/item_button"
-        self._screenNode.AddTouchEventHandler(self.__path + "/item_button", callback, param)
+        self._screenNode.AddTouchEventHandler(
+            self.__path + "/item_button", callback, param
+        )
 
 
 class ImageButton(ModularComponent):
@@ -436,7 +477,9 @@ class PapperDoll(ModularComponent):
         ModularComponent.__init__(self, screenNode, path)
         self.__screenNode = screenNode
         self.__path = path
-        self.__instance = screenNode.GetBaseUIControl(path).asNeteasePaperDoll()  # type:NeteasePaperDollUIControl
+        self.__instance = screenNode.GetBaseUIControl(
+            path
+        ).asNeteasePaperDoll()  # type:NeteasePaperDollUIControl
 
     def setEntity(self, entityId, scale=1.0, init_rot=0, molang={}):
         param = {
@@ -444,7 +487,7 @@ class PapperDoll(ModularComponent):
             "scale": scale,
             "render_depth": -50,
             "init_rot_y": init_rot,
-            "molang_dict": molang
+            "molang_dict": molang,
         }
         # print "param", param
         self.__instance.RenderEntity(param)
@@ -455,7 +498,15 @@ class PapperDoll(ModularComponent):
     def getSkeletonModelId(self):
         return self.__instance.GetModelId()
 
-    def setSkeletonModel(self, identifier, animation="idle", animation_looped=True, scale=1.0, init_rot_y=0, molang={}):
+    def setSkeletonModel(
+        self,
+        identifier,
+        animation="idle",
+        animation_looped=True,
+        scale=1.0,
+        init_rot_y=0,
+        molang={},
+    ):
         param = {
             "skeleton_model_name": identifier,
             "animation": animation,
@@ -469,11 +520,15 @@ class PapperDoll(ModularComponent):
 
 
 class ScrollingPanel(ModularComponent):
-    __MOUSE_PATH = "/scroll_mouse/scroll_view/stack_panel/background_and_viewport" \
-                   "/scrolling_view_port/scrolling_content"
+    __MOUSE_PATH = (
+        "/scroll_mouse/scroll_view/stack_panel/background_and_viewport"
+        "/scrolling_view_port/scrolling_content"
+    )
 
-    __TOUCH_PATH = "/scroll_touch/scroll_view/panel/background_and_viewport" \
-                   "/scrolling_view_port/scrolling_content"
+    __TOUCH_PATH = (
+        "/scroll_touch/scroll_view/panel/background_and_viewport"
+        "/scrolling_view_port/scrolling_content"
+    )
 
     def __init__(self, screenNode, path):
         ModularComponent.__init__(self, screenNode, path)
@@ -531,5 +586,9 @@ class ProgressBar(ModularComponent):
         ModularComponent.__init__(self, screenNode, path)
 
     def setProcess(self, now, max):
-        ModularComponent(self._screenNode, self._path + "_text").setText(("%d/%d" % (now, max)) if max != 0 else "0/0")
-        self._screenNode.GetBaseUIControl(self._path).asProgressBar().SetValue((float(now) / max) if max != 0 else 1.0)
+        ModularComponent(self._screenNode, self._path + "_text").setText(
+            ("%d/%d" % (now, max)) if max != 0 else "0/0"
+        )
+        self._screenNode.GetBaseUIControl(self._path).asProgressBar().SetValue(
+            (float(now) / max) if max != 0 else 1.0
+        )
