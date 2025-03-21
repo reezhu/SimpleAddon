@@ -609,6 +609,16 @@ def getItemBasicInfo(item):
     return comp.GetItemBasicInfo(item.get("itemName"), item.get("auxValue", 0))
 
 
+def getName(entityId):
+    """
+    获取生物的自定义名称（即使用命名牌或者SetName接口设置的名称），或者玩家的名字。
+    @param item:
+    @return:
+    """
+    comp = clientApi.GetEngineCompFactory().CreateName(entityId)
+    return comp.GetName()
+
+
 def getCurrentPlayerId():
     """
     获取当前客户端的playerId
@@ -1001,3 +1011,25 @@ def setQuery(playerId, query, value):
     """
     queryComp = clientApi.GetEngineCompFactory().CreateQueryVariable(playerId)
     queryComp.Set(query, float(value))
+
+
+def save2Clipboard(content):
+    """
+    存至剪切板
+    :param playerId:
+    :param query:
+    :param value:
+    """
+    comp = clientApi.GetEngineCompFactory().CreateGame(clientApi.GetLevelId())
+    comp.SetClipboardContent(content)
+
+
+def load2clipboard():
+    """
+    从剪切板加载
+    :param playerId:
+    :param query:
+    :param value:
+    """
+    comp = clientApi.GetEngineCompFactory().CreateGame(clientApi.GetLevelId())
+    return comp.GetClipboardContent()
