@@ -5,7 +5,6 @@ from mod.server.serverEvent import ServerEvent
 from mod.server.system.serverSystem import ServerSystem
 
 from pythonScripts.server.modules.BaseServerModule import BaseServerModule
-from pythonScripts.share import EventRegisterUtils as Event
 
 
 class MyServerSystem(ServerSystem):
@@ -16,8 +15,6 @@ class MyServerSystem(ServerSystem):
         self.__loading = True
         self.__data = {}
         self.ListenForEvent(serverApi.GetEngineNamespace(), serverApi.GetEngineSystemName(), ServerEvent.LoadServerAddonScriptsAfter, self, self.LoadServerAddonScriptsAfter)
-        from pythonScripts.server import ServerUtils
-        Event.utils = ServerUtils
         self._vanillaEvents = []
         self._clientEvents = []
         self._serverEvents = []

@@ -7,8 +7,8 @@ from mod.server.serverEvent import ServerEvent
 
 import pythonScripts.share.ModConfig as config
 import pythonScripts.share.api.ClientEvents as EventObj
-from pythonScripts.client.MyClientSystem import Event
 from pythonScripts.server import ServerUtils as utils
+from pythonScripts.share import EventRegisterUtils as Event
 from pythonScripts.share import StaticConfig
 
 """

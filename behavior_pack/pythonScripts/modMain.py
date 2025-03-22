@@ -27,6 +27,8 @@ class Boostrap(object):
         print "init server", config.ModName, "@", config.ModVersion
         from pythonScripts.server import ServerUtils
         system = ServerUtils.getSystem()  # type: MyServerSystem
+        from pythonScripts.share import EventRegisterUtils as Event
+        Event.utils = ServerUtils
         if system is None:
             print "register server system @", config.ModName, config.ModVersion
             system = ServerUtils.registerSystem(path="pythonScripts.server.MyServerSystem.MyServerSystem")
@@ -44,6 +46,8 @@ class Boostrap(object):
         print "init client", config.ModName, "@", config.ModVersion
         from pythonScripts.client import ClientUtils
         system = ClientUtils.getSystem()  # type: MyClientSystem
+        from pythonScripts.share import EventRegisterUtils as Event
+        Event.utils = ClientUtils
         if system is None:
             print "register client system @", config.ModName, config.ModVersion
             system = ClientUtils.registerSystem(path="pythonScripts.client.MyClientSystem.MyClientSystem")

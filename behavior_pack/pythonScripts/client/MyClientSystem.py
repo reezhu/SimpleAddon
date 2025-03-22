@@ -5,7 +5,6 @@ from mod.client.clientEvent import ClientEvent
 from mod.client.system.clientSystem import ClientSystem
 
 from pythonScripts.client.modules.BaseClientModule import BaseClientModule
-from pythonScripts.share import EventRegisterUtils as Event
 
 
 class MyClientSystem(ClientSystem):
@@ -18,8 +17,6 @@ class MyClientSystem(ClientSystem):
         self.ListenForEvent(clientApi.GetEngineNamespace(), clientApi.GetEngineSystemName(), ClientEvent.UiInitFinished, self, self.OnUIInitFinished)
         self.ListenForEvent(clientApi.GetEngineNamespace(), clientApi.GetEngineSystemName(), ClientEvent.LoadClientAddonScriptsAfter, self, self.LoadClientAddonScriptsAfter)
 
-        from pythonScripts.client import ClientUtils
-        Event.utils = ClientUtils
         self._vanillaEvents = []
         self._clientEvents = []
         self._serverEvents = []
